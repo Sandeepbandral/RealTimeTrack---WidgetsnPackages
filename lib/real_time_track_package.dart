@@ -34,7 +34,7 @@ class RealTimeTrack {
   }
 
   static GlobalKey<NavigatorState> get navigatorKey {
-    assert(_navigatorKey != null, 'navigatorKey is null');
+    assert(_navigatorKey == null, 'navigatorKey is null');
     return _navigatorKey!;
   }
 }
