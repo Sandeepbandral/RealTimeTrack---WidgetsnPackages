@@ -1,0 +1,3 @@
+class RealTimeTrackAssets {
+  RealTimeTrackAssets._();
+}

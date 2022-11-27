@@ -1,0 +1,3 @@
+class RealTimeTrackConstants {
+  RealTimeTrackConstants._();
+}
