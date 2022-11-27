@@ -8,11 +8,9 @@ class RealTimeTrackThemeData {
   static const Color _darkFillColor = Colors.white;
 
   static final Color _lightFocusColor = Colors.black.withOpacity(0.12);
-  static final Color _darkFocusColor = Colors.white.withOpacity(0.12);
 
   static ThemeData lightThemeData =
       themeData(lightColorScheme, _lightFocusColor);
-  static ThemeData darkThemeData = themeData(darkColorScheme, _darkFocusColor);
 
   static ThemeData themeData(ColorScheme colorScheme, Color focusColor) {
     return ThemeData(
@@ -34,14 +32,14 @@ class RealTimeTrackThemeData {
           _lightFillColor.withOpacity(0.80),
           _darkFillColor,
         ),
-        contentTextStyle: _textTheme.titleMedium!.apply(color: _darkFillColor),
+        contentTextStyle: _textTheme.titleMedium?.apply(color: _darkFillColor),
       ),
     );
   }
 
   static const ColorScheme lightColorScheme = ColorScheme(
-    primary: Color(0xFFB93C5D),
-    primaryContainer: Color(0xFF117378),
+    primary: Color(0xFF0EB002),
+    primaryContainer: Color(0xFFEAF2F4),
     secondary: Color(0xFFEFF3F3),
     secondaryContainer: Color(0xFFFAFBFB),
     background: Color(0xFFE6EBEB),
@@ -53,22 +51,6 @@ class RealTimeTrackThemeData {
     onSecondary: Color(0xFF322942),
     onSurface: Color(0xFF241E30),
     brightness: Brightness.light,
-  );
-
-  static const ColorScheme darkColorScheme = ColorScheme(
-    primary: Color(0xFFFF8383),
-    primaryContainer: Color(0xFF1CDEC9),
-    secondary: Color(0xFF4D1F7C),
-    secondaryContainer: Color(0xFF451B6F),
-    background: Color(0xFF241E30),
-    surface: Color(0xFF1F1929),
-    onBackground: Color(0x0DFFFFFF),
-    error: _darkFillColor,
-    onError: _darkFillColor,
-    onPrimary: _darkFillColor,
-    onSecondary: _darkFillColor,
-    onSurface: _darkFillColor,
-    brightness: Brightness.dark,
   );
 
   static const FontWeight _regular = FontWeight.w400;
