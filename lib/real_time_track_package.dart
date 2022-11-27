@@ -19,6 +19,8 @@ export 'src/widgets/widget_delegate.dart';
 class RealTimeTrack {
   RealTimeTrack._();
 
+  static GlobalKey<NavigatorState>? _navigatorKey;
+
   static void googleFontsAllowRuntimeFetching(bool allow) {
     GoogleFonts.config.allowRuntimeFetching = allow;
   }
@@ -27,7 +29,12 @@ class RealTimeTrack {
     Debug.enabled = allow;
   }
 
-  static GlobalKey<NavigatorState> navigatorKey() {
-    return GlobalKey<NavigatorState>();
+  static set navigatorKey(GlobalKey<NavigatorState> value) {
+    _navigatorKey = value;
+  }
+
+  static GlobalKey<NavigatorState> get navigatorKey {
+    assert(_navigatorKey != null, 'navigatorKey is null');
+    return _navigatorKey!;
   }
 }
