@@ -2,8 +2,10 @@ library real_time_track_package;
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:real_time_track_package/debug.dart';
+import 'package:real_time_track_package/src/debug.dart';
 
+export 'src/debug.dart';
+export 'src/dimension.dart';
 export 'src/real_time_track_theme_data.dart';
 export 'src/real_time_track_assets.dart';
 
@@ -13,8 +15,6 @@ export 'src/widgets/loader.dart';
 export 'src/widgets/scrollable_column.dart';
 export 'src/widgets/sized_box.dart';
 export 'src/widgets/widget_delegate.dart';
-
-export 'debug.dart';
 
 class RealTimeTrack {
   RealTimeTrack._();
