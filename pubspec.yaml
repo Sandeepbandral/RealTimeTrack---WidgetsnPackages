@@ -10,6 +10,11 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^3.0.1
+  pin_code_fields: ^7.4.0
+  avatar_glow: ^2.0.2
+  flutter_svg: ^1.1.6
+  cached_network_image: ^3.2.3
+  shimmer: ^2.0.0
   
 dev_dependencies:
   flutter_test:
@@ -20,3 +25,17 @@ flutter:
 
   assets:
     - assets/
+    - assets/flags/
+    - assets/icons/
+
+  fonts:
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/Gilroy-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Gilroy-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Gilroy-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Gilroy-Bold.ttf
+          weight: 700

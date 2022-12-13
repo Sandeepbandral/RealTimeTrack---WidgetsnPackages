@@ -1,0 +1,52 @@
+class Dimension {
+  Dimension._();
+
+  static const double _scaleFactor = 4.0;
+  static const double d0 = 0.0;
+  static const double d0_25 = _scaleFactor * 0.25;
+  static const double d0_50 = _scaleFactor * 0.50;
+  static const double d0_75 = _scaleFactor * 0.75;
+  static const double d1 = _scaleFactor * 1;
+  static const double d1_50 = _scaleFactor * 1.50;
+  static const double d2 = _scaleFactor * 2;
+  static const double d2_50 = _scaleFactor * 2.50;
+  static const double d3 = _scaleFactor * 3;
+  static const double d4 = _scaleFactor * 4;
+  static const double d4_50 = _scaleFactor * 4.50;
+  static const double d5 = _scaleFactor * 5;
+  static const double d6 = _scaleFactor * 6;
+  static const double d7 = _scaleFactor * 7;
+  static const double d8 = _scaleFactor * 8;
+  static const double d9 = _scaleFactor * 9;
+  static const double d10 = _scaleFactor * 10;
+  static const double d11 = _scaleFactor * 11;
+  static const double d12 = _scaleFactor * 12;
+  static const double d13 = _scaleFactor * 13;
+  static const double d14 = _scaleFactor * 14;
+  static const double d15 = _scaleFactor * 15;
+  static const double d16 = _scaleFactor * 16;
+  static const double d17 = _scaleFactor * 17;
+  static const double d18 = _scaleFactor * 18;
+  static const double d19 = _scaleFactor * 19;
+  static const double d20 = _scaleFactor * 20;
+  static const double d22 = _scaleFactor * 22;
+  static const double d24 = _scaleFactor * 24;
+  static const double d26 = _scaleFactor * 26;
+  static const double d28 = _scaleFactor * 28;
+  static const double d30 = _scaleFactor * 30;
+  static const double d32 = _scaleFactor * 32;
+  static const double d34 = _scaleFactor * 34;
+  static const double d36 = _scaleFactor * 36;
+  static const double d38 = _scaleFactor * 38;
+  static const double d40 = _scaleFactor * 40;
+  static const double d44 = _scaleFactor * 44;
+
+  static const double d48 = _scaleFactor * 48;
+  static const double d58 = _scaleFactor * 58;
+  static const double d60 = _scaleFactor * 60;
+  static const double d64 = _scaleFactor * 64;
+  static const double d68 = _scaleFactor * 68;
+  static const double d82 = _scaleFactor * 82;
+  static const double d88 = _scaleFactor * 88;
+  static const double d90 = _scaleFactor * 90;
+}

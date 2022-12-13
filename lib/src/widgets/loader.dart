@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:real_time_track_package/src/real_time_track_theme_data.dart';
+import 'package:real_time_track_package/src/constants/rtt_theme_data.dart';
 
 const double _kLoaderSize = 14.0;
 
@@ -8,7 +8,7 @@ class Loader {
   Loader._();
 
   static Widget circularProgressIndicator({double? loaderSize, Color? color}) {
-    Color primary = RealTimeTrackThemeData.lightColorScheme.primary;
+    Color primary = RttThemeData.lightColorScheme.primary;
     return Center(
       child: CupertinoActivityIndicator(
         animating: true,
