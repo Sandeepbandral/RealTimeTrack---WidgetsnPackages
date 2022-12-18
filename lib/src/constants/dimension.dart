@@ -49,4 +49,12 @@ class Dimension {
   static const double d82 = _scaleFactor * 82;
   static const double d88 = _scaleFactor * 88;
   static const double d90 = _scaleFactor * 90;
+  static const double d100 = _scaleFactor * 100;
+  static const double d120 = _scaleFactor * 120;
+  static const double d140 = _scaleFactor * 140;
+  static const double d160 = _scaleFactor * 160;
+  static const double d180 = _scaleFactor * 180;
+  static const double d200 = _scaleFactor * 200;
+  static const double d300 = _scaleFactor * 300;
+  static const double d400 = _scaleFactor * 400;
 }
