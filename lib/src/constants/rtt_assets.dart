@@ -18,6 +18,7 @@ class RttAssets {
   static String settings = 'assets/icons/settings.svg';
   static String logout = 'assets/icons/logout.svg';
   static String myTickets = 'assets/icons/my_tickets.svg';
+  static String orderDelivered = 'assets/icons/order_delivered.svg';
 
   static String notification = 'assets/icons/notification.svg';
   static String text = 'assets/icons/text.svg';

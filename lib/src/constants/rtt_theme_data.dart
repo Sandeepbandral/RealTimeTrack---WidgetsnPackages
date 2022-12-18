@@ -10,7 +10,9 @@ class RttThemeData {
 
   static ThemeData lightThemeData = themeData(lightColorScheme);
 
-  static Color lightGrey = const Color(0xffA0AAB2);
+  static Color darkGrey = const Color(0xffA0AAB2);
+
+  static Color lightGrey = const Color(0xffCCD2D8);
 
   static ThemeData themeData(ColorScheme colorScheme) {
     return ThemeData(
