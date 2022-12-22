@@ -2,6 +2,7 @@ class RttAssets {
   RttAssets._();
 
   static String logoWithName = 'assets/icons/logo_with_name.svg';
+  static String login = 'assets/icons/login.png';
   static String success = 'assets/icons/success.svg';
 
   static String homeLine = 'assets/icons/home_line.svg';
