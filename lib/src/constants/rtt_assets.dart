@@ -33,4 +33,7 @@ class RttAssets {
 
   static String driver = 'assets/icons/driver.svg';
   static String needHelp = 'assets/icons/need_help.svg';
+
+  static String picture = 'assets/icons/picture.svg';
+  static String camera = 'assets/icons/camera.svg';
 }
