@@ -47,7 +47,7 @@ class RttMenuItemListing extends StatelessWidget {
       title: Text(
         item.title,
         style: textTheme.titleLarge?.copyWith(
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
       ),
       onTap: item.onTap,
