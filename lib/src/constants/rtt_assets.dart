@@ -40,4 +40,6 @@ class RttAssets {
 
   static String picture = 'assets/icons/picture.svg';
   static String camera = 'assets/icons/camera.svg';
+
+  static String thumb = 'assets/icons/thumb.svg';
 }
