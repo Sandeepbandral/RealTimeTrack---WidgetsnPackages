@@ -11,6 +11,8 @@ class RttAssets {
   static String myOrderFill = 'assets/icons/my_orders_fill.svg';
   static String userLine = 'assets/icons/user_line.svg';
   static String userFill = 'assets/icons/user_line.svg';
+  static String manageOrdersLine = 'assets/icons/manage_orders_line.svg';
+  static String manageOrdersFill = 'assets/icons/manage_orders_fill.svg';
 
   static String edit = 'assets/icons/edit.svg';
   static String help = 'assets/icons/help.svg';
@@ -20,6 +22,8 @@ class RttAssets {
   static String logout = 'assets/icons/logout.svg';
   static String myTickets = 'assets/icons/my_tickets.svg';
   static String orderDelivered = 'assets/icons/order_delivered.svg';
+  static String myProfile = 'assets/icons/my_profile.svg';
+  static String manageDrivers = 'assets/icons/manage_drivers.svg';
 
   static String notification = 'assets/icons/notification.svg';
   static String text = 'assets/icons/text.svg';
