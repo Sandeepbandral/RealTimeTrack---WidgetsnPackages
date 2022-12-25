@@ -19,7 +19,7 @@ class RttTextField extends StatelessWidget {
     this.readOnly = false,
     this.onTap,
     this.border,
-    this.maxLines,
+    this.maxLines = 1,
   }) : super(key: key);
 
   final String? labelText;
@@ -36,7 +36,7 @@ class RttTextField extends StatelessWidget {
   final FormFieldValidator<String>? validator;
   final OutlineInputBorder? border;
   final VoidCallback? onTap;
-  final int? maxLines;
+  final int maxLines;
 
   @override
   Widget build(BuildContext context) {
