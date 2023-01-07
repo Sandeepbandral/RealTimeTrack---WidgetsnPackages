@@ -14,6 +14,7 @@ class RttTextField extends StatelessWidget {
     this.suffixIcon,
     this.prefixIcon,
     this.fillColor,
+    this.hintColor,
     this.inputFormatters,
     this.onChanged,
     this.validator,
@@ -31,6 +32,7 @@ class RttTextField extends StatelessWidget {
   final bool obscureText;
   final bool filled;
   final Color? fillColor;
+  final Color? hintColor;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final List<TextInputFormatter>? inputFormatters;
@@ -77,7 +79,7 @@ class RttTextField extends StatelessWidget {
             hintStyle: textTheme.titleMedium?.copyWith(
               fontSize: 16,
               fontWeight: FontWeight.w400,
-              color: Colors.grey.shade400,
+              color: hintColor ?? Colors.grey.shade400,
             ),
             contentPadding: const EdgeInsets.all(Dimension.d4),
             border: outlineInputBorder,
