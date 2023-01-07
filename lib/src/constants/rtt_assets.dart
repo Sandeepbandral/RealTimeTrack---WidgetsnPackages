@@ -50,4 +50,5 @@ class RttAssets {
 
   static String calendar = 'assets/icons/calendar.svg';
   static String clock = 'assets/icons/clock.svg';
+  static String pin = 'assets/icons/pin.svg';
 }
