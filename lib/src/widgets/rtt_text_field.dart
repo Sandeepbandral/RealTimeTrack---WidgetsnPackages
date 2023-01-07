@@ -13,6 +13,7 @@ class RttTextField extends StatelessWidget {
     this.filled = true,
     this.suffixIcon,
     this.prefixIcon,
+    this.fillColor,
     this.inputFormatters,
     this.onChanged,
     this.validator,
@@ -29,6 +30,7 @@ class RttTextField extends StatelessWidget {
   final TextInputType keyboardType;
   final bool obscureText;
   final bool filled;
+  final Color? fillColor;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final List<TextInputFormatter>? inputFormatters;
@@ -68,7 +70,7 @@ class RttTextField extends StatelessWidget {
           decoration: InputDecoration(
             hintText: hintText,
             filled: filled,
-            fillColor: Colors.white,
+            fillColor: fillColor ?? Colors.white,
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             errorStyle: textTheme.errorStyle,
