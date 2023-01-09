@@ -19,6 +19,7 @@ class RttThemeData {
       colorScheme: colorScheme,
       textTheme: _textTheme,
       fontFamily: _gilroy,
+      unselectedWidgetColor: lightGrey.withOpacity(0.5),
       appBarTheme: AppBarTheme(
         backgroundColor: colorScheme.onBackground,
         elevation: 0,
