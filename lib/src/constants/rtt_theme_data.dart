@@ -19,13 +19,13 @@ class RttThemeData {
       colorScheme: colorScheme,
       textTheme: _textTheme,
       fontFamily: _gilroy,
-      unselectedWidgetColor: lightGrey.withOpacity(0.5),
+      unselectedWidgetColor: lightGrey.withOpacity(0.7),
       appBarTheme: AppBarTheme(
         backgroundColor: colorScheme.onBackground,
         elevation: 0,
         centerTitle: false,
         titleTextStyle: _textTheme.titleLarge?.copyWith(
-          fontSize: 20,
+          fontSize: 18,
           color: Colors.black,
         ),
         iconTheme: IconThemeData(color: colorScheme.primary),
