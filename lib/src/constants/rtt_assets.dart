@@ -55,4 +55,10 @@ class RttAssets {
   static String truck = 'assets/icons/truck.svg';
 
   static String world = 'assets/icons/world.svg';
+
+  static String cancel = 'assets/icons/cancel.svg';
+  static String done = 'assets/icons/done.svg';
+  static String share = 'assets/icons/share.svg';
+  static String whatsapp = 'assets/icons/whatsapp.svg';
+
 }
