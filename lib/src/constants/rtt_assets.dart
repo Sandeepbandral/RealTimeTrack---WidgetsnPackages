@@ -53,4 +53,6 @@ class RttAssets {
   static String pin = 'assets/icons/pin.svg';
 
   static String truck = 'assets/icons/truck.svg';
+
+  static String world = 'assets/icons/world.svg';
 }
