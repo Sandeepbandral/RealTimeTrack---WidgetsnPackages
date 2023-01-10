@@ -60,5 +60,5 @@ class RttAssets {
   static String done = 'assets/icons/done.svg';
   static String share = 'assets/icons/share.svg';
   static String whatsapp = 'assets/icons/whatsapp.svg';
-
+  static String arrowDown = 'assets/icons/arrow_down.svg';
 }
