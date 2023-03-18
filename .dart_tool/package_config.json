@@ -176,6 +176,12 @@
       "languageVersion": "2.16"
     },
     {
+      "name": "jwt_decoder",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/jwt_decoder-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/lints-2.0.1",
       "packageUri": "lib/",
@@ -464,7 +470,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-03-17T10:27:51.772430Z",
+  "generated": "2023-03-18T05:39:26.469617Z",
   "generator": "pub",
   "generatorVersion": "2.19.1"
 }

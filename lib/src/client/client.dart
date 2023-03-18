@@ -21,22 +21,35 @@ export 'package:dio/dio.dart'
 
 enum MethodType { post, get, delete, put, patch }
 
+typedef UnauthenticatedErrorCallback = void Function();
+
 class RttClient {
   final Dio _dio;
 
-  RttClient.fromBaseUrl(
-    String baseUrl, {
+  static String? _baseUrl;
+  static UnauthenticatedErrorCallback? _unauthenticatedErrorCallback;
+
+  static set baseUrl(String value) {
+    if (value == _baseUrl) return;
+    _baseUrl = value;
+  }
+
+  static set unauthenticatedError(UnauthenticatedErrorCallback value) {
+    if (value == _unauthenticatedErrorCallback) return;
+    _unauthenticatedErrorCallback = value;
+  }
+
+  RttClient({
     ResponseType responseType = ResponseType.json,
     Iterable<Interceptor>? interceptors,
-    VoidCallback? onUnauthenticatedError,
-  }) : _dio = Dio(BaseOptions(baseUrl: baseUrl))
+  }) : _dio = Dio(BaseOptions(baseUrl: _baseUrl ?? ''))
           ..interceptors.addAll(
             interceptors ??
                 [
                   _LogInterceptor(),
                   _AuthorizationInterceptor(
                     responseType: responseType,
-                    onUnauthenticatedError: onUnauthenticatedError,
+                    onUnauthenticatedError: _unauthenticatedErrorCallback,
                   )
                 ],
           );
@@ -48,7 +61,7 @@ class RttClient {
   }) async {
     try {
       if (await ConnectivityService.isConnected) {
-        return await _dio.request(
+        return _dio.request(
           path,
           data: data,
           options: Options(
