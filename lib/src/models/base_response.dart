@@ -1,9 +1,17 @@
+enum ResultStatusCode {
+  error,
+  succeed,
+  unauthenticated,
+  tokenExpired,
+  invalidToken
+}
+
 class BaseResponse<T> {
-  final int code;
+  final ResultStatusCode code;
   final String description;
   final T? result;
 
-  BaseResponse({
+  const BaseResponse({
     required this.code,
     required this.description,
     this.result,
@@ -11,16 +19,16 @@ class BaseResponse<T> {
 
   factory BaseResponse.fromResponse(dynamic data) {
     return BaseResponse(
-      code: int.parse(data['resultCode']),
+      code: ResultStatusCode.values[int.parse(data['resultCode'])],
       description: data['resultDescription'],
       result: data['result'],
     );
   }
 
-  bool get isSucceed => code == 1;
+  bool get isSucceed => code == ResultStatusCode.succeed;
 
   BaseResponse copyWith({
-    int? code,
+    ResultStatusCode? code,
     String? description,
     T? result,
   }) {

@@ -2,12 +2,12 @@ import 'package:dio/dio.dart';
 
 class RttException implements Exception {
   final String message;
-  final Response<dynamic>? response;
+  final dynamic data;
 
-  const RttException(this.message, {this.response});
+  const RttException(this.message, {this.data});
 
   @override
   String toString() {
-    return 'BlueBotException(message: $message, response: ${response.toString()})';
+    return 'RttException(message: $message, response: $data)';
   }
 }

@@ -5,7 +5,7 @@ class RttMenuItem {
   final String icon;
   final VoidCallback onTap;
 
-  RttMenuItem({
+  const RttMenuItem({
     required this.title,
     required this.icon,
     required this.onTap,

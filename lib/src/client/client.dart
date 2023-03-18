@@ -1,10 +1,5 @@
-import 'dart:io';
-
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
-import 'package:real_time_track_package/src/client/exceptions.dart';
-import 'package:real_time_track_package/src/constants/constants.dart';
-import 'package:real_time_track_package/src/services/connectivity_service.dart';
+import 'package:real_time_track_package/real_time_track_package.dart';
 
 export 'exceptions.dart';
 export 'header_builder.dart';
@@ -54,20 +49,27 @@ class RttClient {
                 ],
           );
 
-  Future<Response<dynamic>> request({
+  Future<dynamic> request({
     required String path,
     required MethodType method,
     dynamic data,
   }) async {
     try {
       if (await ConnectivityService.isConnected) {
-        return _dio.request(
+        Response response = await _dio.request(
           path,
           data: data,
-          options: Options(
-            method: method.name.toUpperCase(),
-          ),
+          options: Options(method: method.name.toUpperCase()),
         );
+
+        if (response.data['resultCode'] == '1') {
+          return response.data;
+        } else {
+          throw RttException(
+            response.data['resultDescription'],
+            data: response.data,
+          );
+        }
       } else {
         throw const RttException(kNoInternetConnection);
       }
@@ -76,11 +78,9 @@ class RttClient {
           e.type == DioErrorType.receiveTimeout) {
         throw RttException(e.message ?? kDefaulErrorMessage);
       } else {
-        Response<dynamic>? response = e.response;
-        if (response != null) return response;
         throw RttException(
           e.message ?? kDefaulErrorMessage,
-          response: response,
+          data: e.response?.data,
         );
       }
     } catch (e) {
@@ -100,34 +100,71 @@ class _LogInterceptor extends LogInterceptor {
 }
 
 class _AuthorizationInterceptor extends Interceptor {
+  final RttClient client;
   final ResponseType responseType;
-  final VoidCallback? onUnauthenticatedError;
+  final UnauthenticatedErrorCallback? onUnauthenticatedError;
 
   _AuthorizationInterceptor({
     this.responseType = ResponseType.json,
     this.onUnauthenticatedError,
-  });
+  }) : client = RttClient();
+
+  final Preferences _preferences = Preferences.instance;
 
   @override
-  void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+  void onRequest(
+      RequestOptions options, RequestInterceptorHandler handler) async {
     super.onRequest(options, handler);
     options.responseType = responseType;
-  }
 
-  @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
-    super.onError(err, handler);
-    if (err.response?.statusCode == 401) {
-      if (onUnauthenticatedError != null) onUnauthenticatedError!();
+    if (_preferences.isLogged) {
+      Tokens tokens = _preferences.tokens;
+      if (tokens.accessToken != null) {
+        String accessToken = tokens.accessToken ?? '';
+        if (tokens.jwt.isExpired) {
+          dynamic response = await client.request(
+            path: '/account/token/refresh/',
+            method: MethodType.post,
+            data: {'refresh': tokens.refreshToken},
+          );
+          if (response['resultCode'] == '1') {
+            accessToken = response['access'];
+            _preferences.tokens = tokens.replaceAccessToken(accessToken);
+          }
+        }
+        options.headers = HeaderBuilder.builder()
+            .setContentType('application/json')
+            .setBearerToken(accessToken)
+            .build();
+      }
     }
   }
-}
 
-class ClientHttpOverrides extends HttpOverrides {
   @override
-  HttpClient createHttpClient(SecurityContext? context) {
-    return super.createHttpClient(context)
-      ..badCertificateCallback =
-          (X509Certificate cert, String host, int port) => true;
+  void onResponse(Response response, ResponseInterceptorHandler handler) async {
+    super.onResponse(response, handler);
+
+    BaseResponse baseResponse = BaseResponse.fromResponse(response.data);
+
+    switch (baseResponse.code) {
+      case ResultStatusCode.tokenExpired:
+        Tokens tokens = _preferences.tokens;
+
+        dynamic response = await client.request(
+          path: '/account/token/refresh',
+          method: MethodType.post,
+          data: {'refresh': tokens.refreshToken},
+        );
+        if (response['resultCode'] == '1') {
+          _preferences.tokens = tokens.replaceAccessToken(response['access']);
+        }
+        handler.next(response);
+        break;
+      case ResultStatusCode.invalidToken:
+      case ResultStatusCode.unauthenticated:
+        if (onUnauthenticatedError != null) onUnauthenticatedError!();
+        break;
+      default:
+    }
   }
 }

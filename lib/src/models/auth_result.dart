@@ -7,7 +7,7 @@ class AuthResult {
   final List<dynamic> role;
   final String? userTimezone;
 
-  AuthResult({
+  const AuthResult({
     this.accessToken,
     this.refreshToken,
     this.name,

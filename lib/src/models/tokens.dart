@@ -18,7 +18,11 @@ class Tokens {
     return Jwt.fromMap(decodedToken);
   }
 
-  Tokens.empty()
+  Tokens replaceAccessToken(String accessToken) {
+    return Tokens(accessToken: accessToken, refreshToken: refreshToken);
+  }
+
+  const Tokens.empty()
       : accessToken = null,
         refreshToken = null;
 
