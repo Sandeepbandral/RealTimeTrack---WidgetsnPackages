@@ -117,7 +117,7 @@ class _AuthorizationInterceptor extends Interceptor {
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) {
     super.onError(err, handler);
-    if (err.type == DioErrorType.unknown || err.response?.statusCode == 401) {
+    if (err.response?.statusCode == 401) {
       if (onUnauthenticatedError != null) onUnauthenticatedError!();
     }
   }
