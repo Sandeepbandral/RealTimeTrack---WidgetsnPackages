@@ -36,7 +36,7 @@ class CheckAccountRichText extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: title,
-        style: textTheme.bodyText1?.copyWith(color: Colors.black),
+        style: textTheme.bodyLarge?.copyWith(color: Colors.black),
         children: [
           const WidgetSpan(child: SizedBoxW10()),
           TextSpan(

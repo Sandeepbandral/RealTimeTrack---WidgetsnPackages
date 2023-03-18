@@ -28,7 +28,7 @@ class Preferences {
     String? encoded = _shared?.getString(_tokens);
     return encoded != null
         ? Tokens.fromMap(jsonDecode(encoded))
-        : Tokens.empty();
+        : const Tokens.empty();
   }
 
   Future<void> clear() async {

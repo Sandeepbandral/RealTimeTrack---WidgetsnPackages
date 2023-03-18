@@ -1,5 +1,3 @@
-import 'package:dio/dio.dart';
-
 class RttException implements Exception {
   final String message;
   final dynamic data;

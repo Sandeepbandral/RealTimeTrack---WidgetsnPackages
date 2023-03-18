@@ -152,12 +152,6 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "google_fonts",
-      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/google_fonts-3.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "http",
       "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/http-0.13.5",
       "packageUri": "lib/",
@@ -470,7 +464,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-03-18T05:39:26.469617Z",
+  "generated": "2023-03-18T16:01:32.614311Z",
   "generator": "pub",
   "generatorVersion": "2.19.1"
 }

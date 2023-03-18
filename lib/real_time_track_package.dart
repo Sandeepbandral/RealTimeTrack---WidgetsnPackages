@@ -1,7 +1,6 @@
 library real_time_track_package;
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:real_time_track_package/src/constants/debug.dart';
 
 import 'src/constants/dimension.dart';
@@ -54,10 +53,6 @@ class RealTimeTrack {
   RealTimeTrack._();
 
   static const String name = 'real_time_track_package';
-
-  static void googleFontsAllowRuntimeFetching(bool allow) {
-    GoogleFonts.config.allowRuntimeFetching = allow;
-  }
 
   static void enableDebug(bool allow) {
     Debug.enabled = allow;
