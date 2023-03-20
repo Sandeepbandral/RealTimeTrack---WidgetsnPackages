@@ -6,9 +6,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
+typedef OtpVerifiedCallback = Future<bool> Function(String otpCode);
+
 class OtpVerification extends StatefulWidget {
   final VoidCallback onOtpResended;
-  final VoidCallback onOtpVerified;
+  final OtpVerifiedCallback onOtpVerified;
 
   const OtpVerification({
     super.key,
@@ -19,7 +21,7 @@ class OtpVerification extends StatefulWidget {
   static Future<void> show(
     BuildContext context, {
     required VoidCallback onOtpResended,
-    required VoidCallback onOtpVerified,
+    required OtpVerifiedCallback onOtpVerified,
   }) async {
     return await showModalBottomSheet<void>(
       context: context,
@@ -165,14 +167,19 @@ class _OtpVerificationState extends State<OtpVerification> {
                       shape: BoxShape.circle,
                     ),
                     child: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          _isOtpVerified = true;
-                        });
-                        Future.delayed(const Duration(seconds: 2), () {
-                          Navigator.pop(context);
-                          widget.onOtpVerified();
-                        });
+                      onPressed: () async {
+                        if (_otpCode.text.length == 6) {
+                          bool verified =
+                              await widget.onOtpVerified(_otpCode.text);
+
+                          setState(() {
+                            _isOtpVerified = verified;
+                          });
+                          
+                          Future.delayed(const Duration(seconds: 2), () {
+                            Navigator.pop(context);
+                          });
+                        }
                       },
                       icon: const Icon(
                         Icons.arrow_forward,
@@ -219,10 +226,7 @@ class _OtpVerificationState extends State<OtpVerification> {
       enableActiveFill: true,
       keyboardType: TextInputType.number,
       onCompleted: (value) {},
-      onChanged: (value) {
-        if (value.length == 6) {
-        } else {}
-      },
+      onChanged: (value) {},
     );
   }
 }

@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 
 const double _kElevation = 0;
 
-const Duration _kDuration2000ms = Duration(milliseconds: 2000);
+const Duration _kDuration3000ms = Duration(milliseconds: 3000);
 
 const SnackBarBehavior _kSnackBarBehavior = SnackBarBehavior.floating;
 
 class SnackBarUtils {
   SnackBarUtils._();
 
-  static SnackBar snackBar({
-    required String message,
-    Duration duration = _kDuration2000ms,
-  }) {
+  static SnackBar snackBar({required String message, Duration? duration}) {
     Color color = Colors.black;
 
     return SnackBar(
@@ -27,7 +24,7 @@ class SnackBarUtils {
       ),
       backgroundColor: color,
       behavior: _kSnackBarBehavior,
-      duration: duration,
+      duration: duration ?? _kDuration3000ms,
       elevation: _kElevation,
     );
   }
