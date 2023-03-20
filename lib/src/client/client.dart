@@ -19,8 +19,7 @@ enum MethodType { post, get, delete, put, patch }
 typedef UnauthenticatedErrorCallback = void Function();
 
 class RttClient {
-  final Dio _dio;
-
+  late Dio _dio;
   String? _baseUrl;
   UnauthenticatedErrorCallback? _unauthenticatedErrorCallback;
 
@@ -36,14 +35,15 @@ class RttClient {
 
   static RttClient get instance => RttClient._();
 
-  RttClient._()
-      : _dio = Dio(BaseOptions(baseUrl: instance._baseUrl ?? ''))
-          ..interceptors.addAll(
-            [
-              _LogInterceptor(),
-              _AuthorizationInterceptor(instance._unauthenticatedErrorCallback)
-            ],
-          );
+  RttClient._() {
+    instance._dio = Dio(BaseOptions(baseUrl: instance._baseUrl ?? ''))
+      ..interceptors.addAll(
+        [
+          _LogInterceptor(),
+          _AuthorizationInterceptor(instance._unauthenticatedErrorCallback)
+        ],
+      );
+  }
 
   Future<dynamic> request({
     required String path,
