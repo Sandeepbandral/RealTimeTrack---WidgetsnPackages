@@ -43,7 +43,13 @@ class RttClient {
 
   static RttClient? _instance;
 
-  static RttClient get instance => _instance!;
+  static RttClient get instance {
+    if (_instance != null) {
+      return _instance!;
+    } else {
+      throw UnimplementedError();
+    }
+  }
 
   Future<dynamic> request({
     required String path,

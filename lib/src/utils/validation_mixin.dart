@@ -14,14 +14,12 @@ mixin ValidationMixin {
     }
   }
 
-
   String? fullNameValidation(String? value) {
     if (value != null && value.isEmpty) {
       return 'Please enter full name';
     }
     return null;
   }
-
 
   String? phoneNumberValidation(String? value) {
     if (value != null && value.isEmpty) {
