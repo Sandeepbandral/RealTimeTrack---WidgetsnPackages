@@ -19,31 +19,31 @@ enum MethodType { post, get, delete, put, patch }
 typedef UnauthenticatedErrorCallback = void Function();
 
 class RttClient {
-  late Dio _dio;
-  String? _baseUrl;
-  UnauthenticatedErrorCallback? _unauthenticatedErrorCallback;
+  final Dio dio;
+  final UnauthenticatedErrorCallback onUnauthenticatedError;
 
-  static set baseUrl(String value) {
-    if (value == instance._baseUrl) return;
-    instance._baseUrl = value;
-  }
+  RttClient._({
+    required this.dio,
+    required this.onUnauthenticatedError,
+  });
 
-  static set unauthenticatedError(UnauthenticatedErrorCallback value) {
-    if (value == instance._unauthenticatedErrorCallback) return;
-    instance._unauthenticatedErrorCallback = value;
-  }
-
-  static RttClient get instance => RttClient._();
-
-  RttClient._() {
-    instance._dio = Dio(BaseOptions(baseUrl: instance._baseUrl ?? ''))
+  factory RttClient({
+    required String baseUrl,
+    required UnauthenticatedErrorCallback onUnauthenticatedError,
+  }) {
+    Dio dio = Dio(BaseOptions(baseUrl: baseUrl))
       ..interceptors.addAll(
-        [
-          _LogInterceptor(),
-          _AuthorizationInterceptor(instance._unauthenticatedErrorCallback)
-        ],
+        [_LogInterceptor(), _AuthorizationInterceptor(onUnauthenticatedError)],
       );
+    return _instance ??= RttClient._(
+      dio: dio,
+      onUnauthenticatedError: onUnauthenticatedError,
+    );
   }
+
+  static RttClient? _instance;
+
+  static RttClient get instance => _instance!;
 
   Future<dynamic> request({
     required String path,
@@ -52,7 +52,7 @@ class RttClient {
   }) async {
     try {
       if (await ConnectivityService.isConnected) {
-        Response response = await _dio.request(
+        Response response = await dio.request(
           path,
           data: data,
           options: Options(method: method.name.toUpperCase()),
