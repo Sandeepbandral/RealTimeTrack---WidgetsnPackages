@@ -21,32 +21,28 @@ typedef UnauthenticatedErrorCallback = void Function();
 class RttClient {
   final Dio _dio;
 
-  static String? _baseUrl;
-  static UnauthenticatedErrorCallback? _unauthenticatedErrorCallback;
+  String? _baseUrl;
+  UnauthenticatedErrorCallback? _unauthenticatedErrorCallback;
 
   static set baseUrl(String value) {
-    if (value == _baseUrl) return;
-    _baseUrl = value;
+    if (value == instance._baseUrl) return;
+    instance._baseUrl = value;
   }
 
   static set unauthenticatedError(UnauthenticatedErrorCallback value) {
-    if (value == _unauthenticatedErrorCallback) return;
-    _unauthenticatedErrorCallback = value;
+    if (value == instance._unauthenticatedErrorCallback) return;
+    instance._unauthenticatedErrorCallback = value;
   }
 
-  RttClient({
-    ResponseType responseType = ResponseType.json,
-    Iterable<Interceptor>? interceptors,
-  }) : _dio = Dio(BaseOptions(baseUrl: _baseUrl ?? ''))
+  static RttClient get instance => RttClient._();
+
+  RttClient._()
+      : _dio = Dio(BaseOptions(baseUrl: instance._baseUrl ?? ''))
           ..interceptors.addAll(
-            interceptors ??
-                [
-                  _LogInterceptor(),
-                  _AuthorizationInterceptor(
-                    responseType: responseType,
-                    onUnauthenticatedError: _unauthenticatedErrorCallback,
-                  )
-                ],
+            [
+              _LogInterceptor(),
+              _AuthorizationInterceptor(instance._unauthenticatedErrorCallback)
+            ],
           );
 
   Future<dynamic> request({
@@ -101,13 +97,10 @@ class _LogInterceptor extends LogInterceptor {
 
 class _AuthorizationInterceptor extends Interceptor {
   final RttClient client;
-  final ResponseType responseType;
   final UnauthenticatedErrorCallback? onUnauthenticatedError;
 
-  _AuthorizationInterceptor({
-    this.responseType = ResponseType.json,
-    this.onUnauthenticatedError,
-  }) : client = RttClient();
+  _AuthorizationInterceptor(this.onUnauthenticatedError)
+      : client = RttClient.instance;
 
   final Preferences _preferences = Preferences.instance;
 
@@ -115,7 +108,7 @@ class _AuthorizationInterceptor extends Interceptor {
   void onRequest(
       RequestOptions options, RequestInterceptorHandler handler) async {
     super.onRequest(options, handler);
-    options.responseType = responseType;
+    options.responseType = ResponseType.json;
 
     if (_preferences.isLogged) {
       Tokens tokens = _preferences.tokens;
