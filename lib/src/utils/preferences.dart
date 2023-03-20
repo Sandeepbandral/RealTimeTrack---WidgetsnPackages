@@ -12,6 +12,7 @@ class Preferences {
 
   final String _isLogged = 'is_logged';
   final String _tokens = 'tokens';
+  final String _driverBaseUrl = 'driver_base_url';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
@@ -19,6 +20,9 @@ class Preferences {
 
   set isLogged(bool value) => _shared?.setBool(_isLogged, value);
   bool get isLogged => _shared?.getBool(_isLogged) ?? false;
+
+  set driveBaseUrl(String value) => _shared?.setString(_driverBaseUrl, value);
+  String get driveBaseUrl => _shared?.getString(_driverBaseUrl) ?? '';
 
   set tokens(Tokens value) {
     _shared?.setString(_tokens, jsonEncode(value.toMap()));
