@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_time_track_package/src/utils/snack_bar_utils.dart';
 
 extension BuildContextEx on BuildContext {
   MediaQueryData get mediaQuery => MediaQuery.of(this);
@@ -12,4 +13,9 @@ extension BuildContextEx on BuildContext {
   TextTheme get textTheme => theme.textTheme;
 
   ColorScheme get colorScheme => theme.colorScheme;
+
+  void showSnackBar(String message) {
+    SnackBar snackBar = SnackBarUtils.snackBar(message: message);
+    ScaffoldMessenger.of(this).showSnackBar(snackBar);
+  }
 }
