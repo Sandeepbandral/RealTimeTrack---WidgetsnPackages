@@ -19,7 +19,7 @@ export 'src/models/auth_result.dart';
 export 'src/models/tokens.dart';
 export 'src/models/base_response.dart';
 
-export 'src/utils/validation_mixin.dart';
+export 'src/utils/validator.dart';
 export 'src/utils/preferences.dart';
 
 export 'src/helpers/circle_thumb_shape.dart';
