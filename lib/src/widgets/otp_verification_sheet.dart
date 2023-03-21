@@ -6,21 +6,26 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
-typedef OtpVerifiedCallback = Future<bool> Function(String otpCode);
+typedef OtpVerifificationCallback = Future<bool> Function(String otpCode);
+
+typedef OtpVerifiedCallback = void Function(bool verified);
 
 class OtpVerification extends StatefulWidget {
   final VoidCallback onOtpResended;
+  final OtpVerifificationCallback onOtpVerification;
   final OtpVerifiedCallback onOtpVerified;
 
   const OtpVerification({
     super.key,
     required this.onOtpResended,
     required this.onOtpVerified,
+    required this.onOtpVerification,
   });
 
   static Future<void> show(
     BuildContext context, {
     required VoidCallback onOtpResended,
+    required OtpVerifificationCallback onOtpVerification,
     required OtpVerifiedCallback onOtpVerified,
   }) async {
     return await showModalBottomSheet<void>(
@@ -38,6 +43,7 @@ class OtpVerification extends StatefulWidget {
           onWillPop: () async => false,
           child: OtpVerification(
             onOtpResended: onOtpResended,
+            onOtpVerification: onOtpVerification,
             onOtpVerified: onOtpVerified,
           ),
         );
@@ -170,7 +176,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                       onPressed: () async {
                         if (_otpCode.text.length == 6) {
                           bool verified =
-                              await widget.onOtpVerified(_otpCode.text);
+                              await widget.onOtpVerification(_otpCode.text);
 
                           setState(() {
                             _isOtpVerified = verified;
@@ -178,6 +184,7 @@ class _OtpVerificationState extends State<OtpVerification> {
 
                           Future.delayed(const Duration(seconds: 2), () {
                             Navigator.pop(context);
+                            widget.onOtpVerified(verified);
                           });
                         }
                       },
