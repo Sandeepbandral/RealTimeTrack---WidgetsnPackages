@@ -175,7 +175,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                           setState(() {
                             _isOtpVerified = verified;
                           });
-                          
+
                           Future.delayed(const Duration(seconds: 2), () {
                             Navigator.pop(context);
                           });

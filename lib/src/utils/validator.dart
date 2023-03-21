@@ -3,26 +3,26 @@ import 'package:real_time_track_package/src/enums/input_type.dart';
 class Validator {
   Validator._();
   //
-  static String? emailPhoneNumber(String? value) {
+  static String? emailOrPhoneValidator(String? value) {
     if (value != null && value.isEmpty) {
       return 'Please enter Email address or Phone Number';
     } else {
       if (checkInputType(value!) == InputType.email) {
-        return emailAddress(value);
+        return emailAddressValidator(value);
       } else {
-        return phoneNumber(value);
+        return phoneNumberValidator(value);
       }
     }
   }
 
-  static String? fullName(String? value) {
+  static String? fullNameValidator(String? value) {
     if (value != null && value.isEmpty) {
       return 'Please enter full name';
     }
     return null;
   }
 
-  static String? phoneNumber(String? value) {
+  static String? phoneNumberValidator(String? value) {
     if (value != null && value.isEmpty) {
       return 'Please enter phone number';
     }
@@ -30,7 +30,7 @@ class Validator {
     return null;
   }
 
-  static String? emailAddress(String? value) {
+  static String? emailAddressValidator(String? value) {
     if (value?.isNotEmpty ?? false) {
       if (isEmailValid(value!)) {
         return null;
@@ -42,7 +42,7 @@ class Validator {
     }
   }
 
-  static String? password(String? value) {
+  static String? passwordValidator(String? value) {
     if (value != null && value.isEmpty) {
       return 'Please enter password';
     }
@@ -52,7 +52,7 @@ class Validator {
     return null;
   }
 
-  static String? newPassword(String currentPassword, String? value) {
+  static String? newPasswordValidator(String currentPassword, String? value) {
     if (value != null && value.isEmpty) {
       return 'Please enter new password';
     }
@@ -65,7 +65,7 @@ class Validator {
     return null;
   }
 
-  static String? confirmPassword(String password, String? value) {
+  static String? confirmPasswordValidator(String password, String? value) {
     if (value != null && value.isEmpty) {
       return 'Please re-enter password';
     } else {
