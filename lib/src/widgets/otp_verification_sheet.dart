@@ -35,6 +35,7 @@ class OtpVerification extends StatefulWidget {
       enableDrag: false,
       isScrollControlled: true,
       backgroundColor: Colors.white,
+      barrierColor: Colors.black.withOpacity(0.2),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(Dimension.d4),
       ),
