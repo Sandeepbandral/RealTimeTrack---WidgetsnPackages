@@ -22,16 +22,16 @@ class Preferences {
   set isLogged(bool value) => _shared?.setBool(_isLogged, value);
   bool get isLogged => _shared?.getBool(_isLogged) ?? false;
 
-  set organization(Organization value) {
-    _shared?.setString(_organization, jsonEncode(value.toMap()));
+  set organization(Organization? value) {
+    _shared?.setString(_organization, jsonEncode(value?.toMap()));
   }
 
-  Organization get organization {
+  Organization? get organization {
     String? encoded = _shared?.getString(_organization);
     if (encoded != null) {
       return Organization.fromMap(jsonDecode(encoded));
     }
-    throw 'Organization is not found';
+    return null;
   }
 
   set tokens(Tokens value) {
