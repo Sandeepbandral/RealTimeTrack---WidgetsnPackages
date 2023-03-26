@@ -18,6 +18,7 @@ export 'src/models/rtt_items.dart';
 export 'src/models/auth_result.dart';
 export 'src/models/tokens.dart';
 export 'src/models/base_response.dart';
+export 'src/models/organization_model.dart';
 
 export 'src/utils/validator.dart';
 export 'src/utils/preferences.dart';

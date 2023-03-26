@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:real_time_track_package/src/models/organization_model.dart';
 import 'package:real_time_track_package/src/models/tokens.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -12,7 +13,7 @@ class Preferences {
 
   final String _isLogged = 'is_logged';
   final String _tokens = 'tokens';
-  final String _driverBaseUrl = 'driver_base_url';
+  final String _organization = 'organization';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
@@ -21,8 +22,17 @@ class Preferences {
   set isLogged(bool value) => _shared?.setBool(_isLogged, value);
   bool get isLogged => _shared?.getBool(_isLogged) ?? false;
 
-  set driverBaseUrl(String value) => _shared?.setString(_driverBaseUrl, value);
-  String get driverBaseUrl => _shared?.getString(_driverBaseUrl) ?? '';
+  set driverBaseUrl(Organization value) {
+    _shared?.setString(_organization, jsonEncode(value.toMap()));
+  }
+
+  Organization get organization {
+    String? encoded = _shared?.getString(_organization);
+    if (encoded != null) {
+      return Organization.fromMap(jsonDecode(encoded));
+    }
+    throw 'Organization is not found';
+  }
 
   set tokens(Tokens value) {
     _shared?.setString(_tokens, jsonEncode(value.toMap()));

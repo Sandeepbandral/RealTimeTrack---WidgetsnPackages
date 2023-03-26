@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_time_track_package/src/constants/dimension.dart';
 
 class RttThemeData {
   RttThemeData._();
@@ -54,6 +55,14 @@ class RttThemeData {
           _darkFillColor,
         ),
         contentTextStyle: _textTheme.titleMedium?.apply(color: _darkFillColor),
+      ),
+      bottomSheetTheme: BottomSheetThemeData(
+        modalElevation: 0,
+        modalBackgroundColor: Colors.white,
+        modalBarrierColor: Colors.black.withOpacity(0.2),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(Dimension.d4),
+        ),
       ),
     );
   }

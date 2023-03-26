@@ -30,15 +30,9 @@ class OtpVerification extends StatefulWidget {
   }) async {
     return await showModalBottomSheet<void>(
       context: context,
-      elevation: 0,
       isDismissible: false,
       enableDrag: false,
       isScrollControlled: true,
-      backgroundColor: Colors.white,
-      barrierColor: Colors.black.withOpacity(0.2),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(Dimension.d4),
-      ),
       builder: (context) {
         return WillPopScope(
           onWillPop: () async => false,
