@@ -22,7 +22,7 @@ class Preferences {
   set isLogged(bool value) => _shared?.setBool(_isLogged, value);
   bool get isLogged => _shared?.getBool(_isLogged) ?? false;
 
-  set driverBaseUrl(Organization value) {
+  set organization(Organization value) {
     _shared?.setString(_organization, jsonEncode(value.toMap()));
   }
 
