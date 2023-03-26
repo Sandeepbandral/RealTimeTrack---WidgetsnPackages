@@ -23,6 +23,7 @@ class Country {
   factory Country.us() {
     return Country.fromMap(countries.firstWhere((e) => e['code'] == 'US'));
   }
+
   @override
   String toString() => '$name ($dialCode)';
 }

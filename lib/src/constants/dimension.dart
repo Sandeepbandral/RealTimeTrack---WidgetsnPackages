@@ -39,9 +39,16 @@ class Dimension {
   static const double d36 = _scaleFactor * 36;
   static const double d38 = _scaleFactor * 38;
   static const double d40 = _scaleFactor * 40;
+  static const double d41 = _scaleFactor * 41;
+  static const double d42 = _scaleFactor * 42;
+  static const double d43 = _scaleFactor * 43;
   static const double d44 = _scaleFactor * 44;
-
+  static const double d45 = _scaleFactor * 45;
+  static const double d46 = _scaleFactor * 46;
+  static const double d47 = _scaleFactor * 47;
   static const double d48 = _scaleFactor * 48;
+  static const double d49 = _scaleFactor * 49;
+  static const double d50 = _scaleFactor * 50;
   static const double d58 = _scaleFactor * 58;
   static const double d60 = _scaleFactor * 60;
   static const double d64 = _scaleFactor * 64;
