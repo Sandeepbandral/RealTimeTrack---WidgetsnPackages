@@ -68,7 +68,9 @@ class CountryPickerState extends State<CountryPicker> {
   }
 
   Future<void> _loadCountries() async {
-    _countries = List<Country>.from(countries.map((x) => Country.fromMap(x)));
+    _countries = List<Country>.from(
+      Countries.allCountries.map((x) => Country.fromMap(x)),
+    );
     _rebuild();
   }
 
