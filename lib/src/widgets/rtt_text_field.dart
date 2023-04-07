@@ -68,6 +68,8 @@ class RttTextField extends StatelessWidget {
           keyboardType: keyboardType,
           obscureText: obscureText,
           maxLines: maxLines,
+          readOnly: readOnly,
+          onTap: onTap,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           decoration: InputDecoration(
             hintText: hintText,
