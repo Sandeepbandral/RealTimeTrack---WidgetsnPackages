@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-extension WidgetExtensions on Widget {
+extension WidgetEx on Widget {
   Widget toShimmer() {
     return Shimmer.fromColors(
       baseColor: Colors.grey.withOpacity(0.1),
