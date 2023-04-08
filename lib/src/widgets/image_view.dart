@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:real_time_track_package/src/extensions/widget_extesion.dart';
+import 'package:real_time_track_package/src/extensions/widget_ex.dart';
 
 class ImageRadius {
   const ImageRadius._(this.value);

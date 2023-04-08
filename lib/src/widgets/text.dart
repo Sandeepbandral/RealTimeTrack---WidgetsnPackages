@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:real_time_track_package/src/extensions/text_theme_extesion.dart';
+import 'package:real_time_track_package/src/extensions/text_theme_ex.dart';
 import 'package:real_time_track_package/src/widgets/sized_box.dart';
 
 class HeadingText extends StatelessWidget {

@@ -47,9 +47,10 @@ export 'src/widgets/image_view.dart';
 export 'src/widgets/rtt_menu_item_listing.dart';
 export 'src/widgets/app_bar.dart';
 
-export 'src/extensions/text_theme_extesion.dart';
-export 'src/extensions/widget_extesion.dart';
+export 'src/extensions/text_theme_ex.dart';
+export 'src/extensions/widget_ex.dart';
 export 'src/extensions/build_context_ex.dart';
+export 'src/extensions/string_ex.dart';
 
 class RealTimeTrack {
   RealTimeTrack._();
