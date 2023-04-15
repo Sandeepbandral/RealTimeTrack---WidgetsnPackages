@@ -59,6 +59,7 @@ class RttTextField extends StatelessWidget {
             child: Text(labelText ?? '', style: textTheme.titleSmall),
           ),
         TextFormField(
+          enableInteractiveSelection: false,
           style: textTheme.titleMedium?.copyWith(fontSize: 18),
           controller: controller,
           validator: validator,
