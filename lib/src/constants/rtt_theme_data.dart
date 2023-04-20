@@ -64,6 +64,13 @@ class RttThemeData {
           borderRadius: BorderRadius.circular(Dimension.d4),
         ),
       ),
+      dialogTheme: DialogTheme(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
     );
   }
 
