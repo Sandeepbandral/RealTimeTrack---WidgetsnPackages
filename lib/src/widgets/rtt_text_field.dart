@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
@@ -23,7 +22,8 @@ class RttTextField extends StatelessWidget {
   final int? maxLines;
   final double? maxHeight;
   final double? fontSize;
-  final bool enabled;
+  final bool? enabled;
+  final bool? enableInteractiveSelection;
 
   const RttTextField({
     Key? key,
@@ -46,7 +46,8 @@ class RttTextField extends StatelessWidget {
     this.maxLines = 1,
     this.maxHeight,
     this.fontSize,
-    this.enabled = true,
+    this.enabled,
+    this.enableInteractiveSelection,
   }) : super(key: key);
 
   @override
@@ -88,6 +89,7 @@ class RttTextField extends StatelessWidget {
   Widget _buildTextField(
       {required TextTheme textTheme, required ColorScheme colorScheme}) {
     return TextFormField(
+      enableInteractiveSelection: enableInteractiveSelection,
       autocorrect: false,
       autofocus: false,
       style: textTheme.titleMedium?.copyWith(fontSize: fontSize ?? 18),
