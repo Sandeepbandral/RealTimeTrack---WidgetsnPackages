@@ -85,6 +85,8 @@ class RttTextField extends StatelessWidget {
   Widget _buildTextField(
       {required TextTheme textTheme, required ColorScheme colorScheme}) {
     return TextFormField(
+      autocorrect: false,
+      autofocus: false,
       style: textTheme.titleMedium?.copyWith(fontSize: fontSize ?? 18),
       controller: controller,
       validator: validator,
