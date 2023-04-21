@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
@@ -22,6 +23,7 @@ class RttTextField extends StatelessWidget {
   final int? maxLines;
   final double? maxHeight;
   final double? fontSize;
+  final bool enabled;
 
   const RttTextField({
     Key? key,
@@ -44,6 +46,7 @@ class RttTextField extends StatelessWidget {
     this.maxLines = 1,
     this.maxHeight,
     this.fontSize,
+    this.enabled = true,
   }) : super(key: key);
 
   @override
@@ -98,6 +101,7 @@ class RttTextField extends StatelessWidget {
       maxLines: maxLines,
       readOnly: readOnly,
       onTap: onTap,
+      enabled: enabled,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
