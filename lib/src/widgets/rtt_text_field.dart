@@ -21,6 +21,7 @@ class RttTextField extends StatelessWidget {
   final VoidCallback? onTap;
   final int? maxLines;
   final double? maxHeight;
+  final double? fontSize;
 
   const RttTextField({
     Key? key,
@@ -42,6 +43,7 @@ class RttTextField extends StatelessWidget {
     this.border,
     this.maxLines = 1,
     this.maxHeight,
+    this.fontSize,
   }) : super(key: key);
 
   @override
@@ -83,7 +85,7 @@ class RttTextField extends StatelessWidget {
   Widget _buildTextField(
       {required TextTheme textTheme, required ColorScheme colorScheme}) {
     return TextFormField(
-      style: textTheme.titleMedium?.copyWith(fontSize: 18),
+      style: textTheme.titleMedium?.copyWith(fontSize: fontSize ?? 18),
       controller: controller,
       validator: validator,
       onChanged: onChanged,
