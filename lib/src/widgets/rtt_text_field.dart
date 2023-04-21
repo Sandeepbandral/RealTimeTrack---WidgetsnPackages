@@ -40,7 +40,7 @@ class RttTextField extends StatelessWidget {
   final FormFieldValidator<String>? validator;
   final OutlineInputBorder? border;
   final VoidCallback? onTap;
-  final int maxLines;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
