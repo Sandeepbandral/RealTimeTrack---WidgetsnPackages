@@ -11,7 +11,7 @@ extension TextThemeEx on TextTheme {
 
   TextStyle? get errorStyle {
     return titleSmall?.copyWith(
-      fontSize: 10,
+      fontSize: 12,
       color: Colors.red,
       fontWeight: FontWeight.normal,
     );
