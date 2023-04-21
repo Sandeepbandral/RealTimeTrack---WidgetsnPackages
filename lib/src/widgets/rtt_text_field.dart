@@ -86,8 +86,10 @@ class RttTextField extends StatelessWidget {
     );
   }
 
-  Widget _buildTextField(
-      {required TextTheme textTheme, required ColorScheme colorScheme}) {
+  Widget _buildTextField({
+    required TextTheme textTheme,
+    required ColorScheme colorScheme,
+  }) {
     return TextFormField(
       enableInteractiveSelection: enableInteractiveSelection,
       autocorrect: false,
