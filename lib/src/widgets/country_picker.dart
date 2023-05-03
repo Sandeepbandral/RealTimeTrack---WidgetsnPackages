@@ -180,7 +180,7 @@ class _CountyView extends StatelessWidget {
           const SizedBoxW10(),
           Text(
             country.dialCode,
-            style: textTheme.titleLarge?.copyWith(fontSize: 18),
+            style: textTheme.titleMedium?.copyWith(fontSize: 16),
           ),
         ],
       ),
