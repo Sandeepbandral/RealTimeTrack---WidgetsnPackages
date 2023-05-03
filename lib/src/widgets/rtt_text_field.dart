@@ -20,6 +20,7 @@ class RttTextField extends StatelessWidget {
   final OutlineInputBorder? border;
   final VoidCallback? onTap;
   final int? maxLines;
+  final int? maxLength;
   final double? maxHeight;
   final double? fontSize;
   final bool? enabled;
@@ -44,6 +45,7 @@ class RttTextField extends StatelessWidget {
     this.onTap,
     this.border,
     this.maxLines = 1,
+    this.maxLength,
     this.maxHeight,
     this.fontSize,
     this.enabled,
@@ -106,6 +108,7 @@ class RttTextField extends StatelessWidget {
       readOnly: readOnly,
       onTap: onTap,
       enabled: enabled,
+      maxLength: maxLength,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
