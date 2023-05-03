@@ -98,7 +98,8 @@ class RttTextField extends StatelessWidget {
       enableInteractiveSelection: enableInteractiveSelection,
       autocorrect: false,
       autofocus: false,
-      style: textTheme.titleMedium?.copyWith(fontSize: fontSize ?? 18),
+      style: textTheme.titleMedium
+          ?.copyWith(fontSize: fontSize ?? 18, fontWeight: FontWeight.w400),
       controller: controller,
       validator: validator,
       onChanged: onChanged,
