@@ -126,7 +126,7 @@ class RttTextField extends StatelessWidget {
         helperStyle: textTheme.titleMedium?.copyWith(
           fontSize: 12,
           fontWeight: FontWeight.w400,
-          color:  Colors.grey.shade400,
+          color:  Colors.grey.shade600,
         ),
         border: outlineInputBorder,
         enabledBorder: outlineInputBorder,
