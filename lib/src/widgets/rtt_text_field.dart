@@ -123,6 +123,11 @@ class RttTextField extends StatelessWidget {
           color: hintColor ?? Colors.grey.shade400,
         ),
         contentPadding: const EdgeInsets.all(Dimension.d4),
+        helperStyle: textTheme.titleMedium?.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w400,
+          color:  Colors.grey.shade400,
+        ),
         border: outlineInputBorder,
         enabledBorder: outlineInputBorder,
         focusedBorder: outlineInputBorder.copyWith(
