@@ -8,6 +8,7 @@ class RttTextField extends StatelessWidget {
   final bool readOnly;
   final TextEditingController controller;
   final TextInputType keyboardType;
+  final TextCapitalization textCapitalization;
   final bool obscureText;
   final bool filled;
   final Color? fillColor;
@@ -35,6 +36,7 @@ class RttTextField extends StatelessWidget {
     this.obscureText = false,
     this.filled = true,
     this.suffixIcon,
+    this.textCapitalization = TextCapitalization.none,
     this.prefixIcon,
     this.fillColor,
     this.hintColor,
@@ -109,6 +111,7 @@ class RttTextField extends StatelessWidget {
       onTap: onTap,
       enabled: enabled,
       maxLength: maxLength,
+      textCapitalization: textCapitalization,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
@@ -126,7 +129,7 @@ class RttTextField extends StatelessWidget {
         helperStyle: textTheme.titleMedium?.copyWith(
           fontSize: 12,
           fontWeight: FontWeight.w400,
-          color:  Colors.grey.shade600,
+          color: Colors.grey.shade600,
         ),
         border: outlineInputBorder,
         enabledBorder: outlineInputBorder,
