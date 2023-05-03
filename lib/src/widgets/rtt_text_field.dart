@@ -69,7 +69,11 @@ class RttTextField extends StatelessWidget {
               left: Dimension.d2,
               bottom: Dimension.d2,
             ),
-            child: Text(labelText ?? '', style: textTheme.titleSmall),
+            child: Text(
+              labelText ?? '',
+              style:
+                  textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600),
+            ),
           ),
         if (maxHeight != null) ...[
           Container(
