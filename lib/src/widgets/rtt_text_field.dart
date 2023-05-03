@@ -99,7 +99,7 @@ class RttTextField extends StatelessWidget {
       autocorrect: false,
       autofocus: false,
       style: textTheme.titleMedium
-          ?.copyWith(fontSize: fontSize ?? 18, fontWeight: FontWeight.w400),
+          ?.copyWith(fontSize: fontSize ?? 16, fontWeight: FontWeight.w400),
       controller: controller,
       validator: validator,
       onChanged: onChanged,
