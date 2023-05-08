@@ -18,8 +18,7 @@ dependencies:
   shared_preferences: ^2.0.18
   jwt_decoder: ^2.0.1
   package_info_plus: ^3.0.3
-  device_info_plus:
-    path: packages/device_info_plus
+  device_info_plus: ^8.2.2
   
 dev_dependencies:
   flutter_test:
