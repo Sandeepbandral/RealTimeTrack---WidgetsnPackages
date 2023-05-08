@@ -3,16 +3,28 @@ import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
+class DeviceInfo {
+  final String? model;
+  final String? version;
+  final String? deviceId;
+  final String? name;
+  final String? type;
+
+  const DeviceInfo({
+    this.model,
+    this.version,
+    this.deviceId,
+    this.name,
+    this.type,
+  });
+}
+
 abstract class PlatformService {
   static _PlatformInfoImpl get instance => _PlatformInfoImpl();
 
   Future<void> init();
 
-  String? get deviceId;
-
-  String? get deviceName;
-
-  String get platform;
+  DeviceInfo? getDeviceInfo();
 }
 
 class _PlatformInfoImpl implements PlatformService {
@@ -35,41 +47,20 @@ class _PlatformInfoImpl implements PlatformService {
   }
 
   @override
-  String? get deviceId {
+  DeviceInfo? getDeviceInfo() {
+    bool isAndroid = Platform.isAndroid;
+
     if (_isInitialize) {
-      if (Platform.isIOS) {
-        return _iosInfo?.identifierForVendor;
-      } else if (Platform.isAndroid) {
-        return _androidInfo?.id;
-      }
-      return null;
+      return DeviceInfo(
+        type: isAndroid ? 'android' : 'ios',
+        deviceId: isAndroid ? _androidInfo?.id : _iosInfo?.identifierForVendor,
+        name: isAndroid ? _androidInfo?.device : _iosInfo?.name,
+        model: isAndroid ? _androidInfo?.model : _iosInfo?.model,
+        version:
+            isAndroid ? _androidInfo?.version.release : _iosInfo?.systemVersion,
+      );
     } else {
       throw PlatformServiceInitialzedException();
-    }
-  }
-
-  @override
-  String? get deviceName {
-    if (_isInitialize) {
-      if (Platform.isIOS) {
-        return _iosInfo?.name;
-      } else if (Platform.isAndroid) {
-        return _androidInfo?.device;
-      }
-      return null;
-    } else {
-      throw PlatformServiceInitialzedException();
-    }
-  }
-
-  @override
-  String get platform {
-    if (Platform.isAndroid) {
-      return 'android';
-    } else if (Platform.isIOS) {
-      return 'ios';
-    } else {
-      return 'unknown';
     }
   }
 }
