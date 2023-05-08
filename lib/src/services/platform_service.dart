@@ -24,7 +24,7 @@ abstract class PlatformService {
 
   Future<void> init();
 
-  DeviceInfo? getDeviceInfo();
+  DeviceInfo getDeviceInfo();
 }
 
 class _PlatformInfoImpl implements PlatformService {
@@ -47,7 +47,7 @@ class _PlatformInfoImpl implements PlatformService {
   }
 
   @override
-  DeviceInfo? getDeviceInfo() {
+  DeviceInfo getDeviceInfo() {
     bool isAndroid = Platform.isAndroid;
 
     if (_isInitialize) {
