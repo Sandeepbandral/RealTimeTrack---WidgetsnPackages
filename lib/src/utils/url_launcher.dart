@@ -23,7 +23,7 @@ class UrlLauncher {
     }
   }
 
-  Future<void> call(String phoneNumber) async {
+  static Future<void> call(String phoneNumber) async {
     final Uri callUri = Uri(
       scheme: 'tel',
       path: phoneNumber,
