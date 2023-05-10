@@ -22,6 +22,8 @@ export 'src/models/organization_model.dart';
 
 export 'src/utils/validator.dart';
 export 'src/utils/preferences.dart';
+export 'src/utils/url_launcher.dart';
+export 'src/utils/snack_bar_utils.dart';
 
 export 'src/helpers/circle_thumb_shape.dart';
 export 'src/helpers/exceptions.dart';
