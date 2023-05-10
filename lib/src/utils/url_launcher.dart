@@ -24,14 +24,14 @@ class UrlLauncher {
   }
 
   static Future<void> call(String phoneNumber) async {
-    final Uri callUri = Uri(
-      scheme: 'tel',
-      path: phoneNumber,
-    );
     try {
+      final Uri callUri = Uri(
+        scheme: 'tel',
+        path: phoneNumber,
+      );
       await launchUrl(callUri);
     } catch (e) {
-      throw 'Could not cajj $callUri';
+      throw 'Could not call $phoneNumber';
     }
   }
 
