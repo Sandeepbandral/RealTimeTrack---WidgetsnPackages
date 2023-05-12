@@ -47,9 +47,9 @@ class RttAssets {
   static String delete = 'assets/icons/delete.svg';
 
   static String d = 'assets/icons/d.svg';
-  static String dGreen = 'assets/icons/d_green.svg';
+  static String dAssigned = 'assets/icons/d_assigned.svg';
   static String p = 'assets/icons/p.svg';
-  static String pGreen = 'assets/icons/p_green.svg';
+  static String pAssigned = 'assets/icons/p_assigned.svg';
 
   static String calendar = 'assets/icons/calendar.svg';
   static String clock = 'assets/icons/clock.svg';
