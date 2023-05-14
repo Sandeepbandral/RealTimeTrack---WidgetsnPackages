@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:real_time_track_package/real_time_track_package.dart';
 import 'package:real_time_track_package/src/models/organization_model.dart';
 import 'package:real_time_track_package/src/models/tokens.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,6 +15,7 @@ class Preferences {
   final String _isLogged = 'is_logged';
   final String _tokens = 'tokens';
   final String _organization = 'organization';
+  final String _role = 'organization';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
@@ -21,6 +23,9 @@ class Preferences {
 
   set isLogged(bool value) => _shared?.setBool(_isLogged, value);
   bool get isLogged => _shared?.getBool(_isLogged) ?? false;
+
+  set role(Role value) => _shared?.setInt(_role, value.index);
+  Role get role => Role.values[_shared?.getInt(_role) ?? 0];
 
   set organization(Organization? value) {
     _shared?.setString(_organization, jsonEncode(value?.toMap()));
