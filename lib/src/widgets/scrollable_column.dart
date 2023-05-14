@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:real_time_track_package/real_time_track_package.dart';
 
 class ScrollableColumn extends StatelessWidget {
   const ScrollableColumn({
@@ -77,7 +78,7 @@ class ScrollableColumn extends StatelessWidget {
       scrollDirection: scrollDirection,
       dragStartBehavior: dragStartBehavior,
       keyboardDismissBehavior: keyboardDismissBehavior,
-      child: SizedBox.fromSize(size: context.size, child: column),
+      child: SizedBox.fromSize(size: context.mediaQuery.size, child: column),
     );
 
     Widget child = isScrollable
