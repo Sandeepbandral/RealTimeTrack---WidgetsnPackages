@@ -12,6 +12,8 @@ export 'src/constants/rtt_assets.dart';
 export 'src/constants/constants.dart';
 
 export 'src/enums/input_type.dart';
+export 'src/enums/method_type.dart';
+export 'src/enums/role.dart';
 
 export 'src/models/country_model.dart';
 export 'src/models/rtt_items.dart';
