@@ -58,6 +58,8 @@ export 'src/extensions/widget_ex.dart';
 export 'src/extensions/build_context_ex.dart';
 export 'src/extensions/string_ex.dart';
 
+export 'package:image_picker/image_picker.dart' show ImageSource;
+
 class RealTimeTrack {
   RealTimeTrack._();
 
