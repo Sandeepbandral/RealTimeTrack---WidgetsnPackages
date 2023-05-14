@@ -48,9 +48,12 @@ class _ImageSourceListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: SvgPicture.asset(
-        icon,
-        package: RealTimeTrack.name,
+      leading: CircleAvatar(
+        backgroundColor: Colors.transparent,
+        child: SvgPicture.asset(
+          icon,
+          package: RealTimeTrac.name,
+        ),
       ),
       title: Text(
         title,

@@ -61,8 +61,8 @@ export 'src/extensions/string_ex.dart';
 
 export 'package:image_picker/image_picker.dart' show ImageSource;
 
-class RealTimeTrack {
-  RealTimeTrack._();
+class RealTimeTrac {
+  RealTimeTrac._();
 
   static const String name = 'real_time_track_package';
 

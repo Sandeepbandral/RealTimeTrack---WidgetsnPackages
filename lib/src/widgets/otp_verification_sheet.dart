@@ -118,7 +118,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                   repeatPauseDuration: const Duration(milliseconds: 100),
                   child: SvgPicture.asset(
                     RttAssets.success,
-                    package: RealTimeTrack.name,
+                    package: RealTimeTrac.name,
                   ),
                 ),
               ),

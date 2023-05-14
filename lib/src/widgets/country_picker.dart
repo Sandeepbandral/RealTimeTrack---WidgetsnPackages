@@ -133,7 +133,7 @@ class CountryPickerState extends State<CountryPicker> {
               country.image,
               height: 30,
               width: 50,
-              package: RealTimeTrack.name,
+              package: RealTimeTrac.name,
               filterQuality: FilterQuality.high,
             ),
             title: Text(
@@ -174,7 +174,7 @@ class _CountyView extends StatelessWidget {
             country.image,
             height: 20,
             width: 40,
-            package: RealTimeTrack.name,
+            package: RealTimeTrac.name,
             filterQuality: FilterQuality.high,
           ),
           const SizedBoxW10(),
