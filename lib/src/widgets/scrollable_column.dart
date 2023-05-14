@@ -77,7 +77,7 @@ class ScrollableColumn extends StatelessWidget {
       scrollDirection: scrollDirection,
       dragStartBehavior: dragStartBehavior,
       keyboardDismissBehavior: keyboardDismissBehavior,
-      child: column,
+      child: SizedBox.fromSize(size: context.size, child: column),
     );
 
     Widget child = isScrollable
