@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="23.406" height="26.069" viewBox="0 0 23.406 26.069">
-  <g id="Group_1244" data-name="Group 1244" transform="translate(-3.399 -314.416)">
-    <path id="Path_14777" data-name="Path 14777" d="M-204.923,59.77V50.088a2.318,2.318,0,0,0-1.159-2.008l-8.385-4.841a2.318,2.318,0,0,0-2.318,0l-8.385,4.841a2.318,2.318,0,0,0-1.159,2.008V59.77a2.318,2.318,0,0,0,1.159,2.008l8.385,4.841a2.318,2.318,0,0,0,2.318,0l8.385-4.841A2.318,2.318,0,0,0-204.923,59.77Z" transform="translate(230.728 272.521)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
-    <text id="P" transform="translate(10.945 331.789)" fill="#202020" font-size="14" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">P</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="60.594" height="67.621" viewBox="0 0 60.594 67.621">
+  <g id="Group_1244" data-name="Group 1244" transform="translate(-2.399 -313.366)">
+    <path id="Path_14777" data-name="Path 14777" d="M-169.735,87.454v-25.6a6.13,6.13,0,0,0-3.065-5.308l-22.168-12.8a6.129,6.129,0,0,0-6.129,0l-22.167,12.8a6.129,6.129,0,0,0-3.065,5.308v25.6a6.129,6.129,0,0,0,3.065,5.308l22.167,12.8a6.13,6.13,0,0,0,6.129,0l22.168-12.8A6.13,6.13,0,0,0-169.735,87.454Z" transform="translate(230.728 272.521)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="4"/>
+    <text id="D" transform="translate(21.707 358.275)" fill="#202020" font-size="36" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">P</tspan></text>
   </g>
 </svg>
