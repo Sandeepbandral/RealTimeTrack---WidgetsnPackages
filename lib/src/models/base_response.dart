@@ -18,14 +18,19 @@ class BaseResponse<T> {
   });
 
   factory BaseResponse.fromResponse(dynamic data) {
+    Map<String, dynamic> map = Map<String, dynamic>.from(data);
     return BaseResponse(
       code: ResultStatusCode.values[int.parse(data['resultCode'])],
-      description: data['resultDescription'],
+      description: map.containsKey('resultDescription')
+          ? data['resultDescription']
+          : map.containsKey('errorMessage')
+              ? data['errorMessage']
+              : '',
       result: data['result'],
     );
   }
 
-  bool get isSucceed => code == ResultStatusCode.succeed;
+  bool get isSucceeded => code == ResultStatusCode.succeed;
 
   BaseResponse copyWith({
     ResultStatusCode? code,
