@@ -24,11 +24,13 @@ class BaseResponse<T> {
       description: map.containsKey('resultDescription')
           ? data['resultDescription']
           : map.containsKey('errorMessage')
-              ? Map<String, List<dynamic>>.from(data['errorMessage'])
-                  .entries
-                  .map((e) => '${e.key}: ${e.value.first}')
-                  .join('\n')
-              : '',
+              ? data['errorMessage'] is Map
+                  ? Map<String, List<dynamic>>.from(data['errorMessage'])
+                      .entries
+                      .map((e) => '${e.key}: ${e.value.first}')
+                      .join('\n')
+                  : 'Unknown Error. Please try again.'
+              : data['errorMessage'],
       result: data['result'],
     );
   }
