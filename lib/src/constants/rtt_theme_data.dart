@@ -112,7 +112,6 @@ class RttThemeData {
     bodyMedium: TextStyle(fontWeight: _regular, fontSize: 16.0),
     titleLarge: TextStyle(fontWeight: _bold, fontSize: 16.0),
     labelLarge: TextStyle(fontWeight: _semiBold, fontSize: 14.0),
-    
   );
 
   static MaterialColor generateMaterialColor(Color color) {
