@@ -24,7 +24,10 @@ class BaseResponse<T> {
       description: map.containsKey('resultDescription')
           ? data['resultDescription']
           : map.containsKey('errorMessage')
-              ? data['errorMessage']
+              ? Map<String, List<dynamic>>.from(data['errorMessage'])
+                  .entries
+                  .map((e) => '${e.key}: ${e.value.first}')
+                  .join('\n')
               : '',
       result: data['result'],
     );
