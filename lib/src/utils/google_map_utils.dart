@@ -3,9 +3,6 @@ enum TravelMode { driving, bicycling, transit, walking }
 class GoogleMapUtils {
   const GoogleMapUtils._();
 
-  static const String googleMapUrl =
-      'https://www.google.com/maps/search/?api=1&query';
-
   static String getGoogleMapDirectionsUrl({
     required Coordinates destination,
     String? destinationTitle,
