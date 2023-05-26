@@ -66,4 +66,5 @@ class RttAssets {
   static String arrowDown = 'assets/icons/arrow_down.svg';
 
   static String locationPin = 'assets/icons/location_pin.png';
+  static String currentLocation = 'assets/icons/current_location.png';
 }
