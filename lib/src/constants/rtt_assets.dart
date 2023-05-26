@@ -64,4 +64,6 @@ class RttAssets {
   static String share = 'assets/icons/share.svg';
   static String whatsapp = 'assets/icons/whatsapp.svg';
   static String arrowDown = 'assets/icons/arrow_down.svg';
+
+  static String locationPin = 'assets/icons/location_pin.png';
 }
