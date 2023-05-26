@@ -30,7 +30,7 @@ class BaseResponse<T> {
                       .map((e) => '${e.key}: ${e.value.first}')
                       .join('\n')
                   : 'Unknown Error. Please try again.'
-              : data['errorMessage'],
+              : data['errorMessage'] ?? '',
       result: data['result'],
     );
   }
