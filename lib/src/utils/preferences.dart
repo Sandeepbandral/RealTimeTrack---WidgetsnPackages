@@ -14,17 +14,10 @@ class Preferences {
   final String _tokens = 'tokens';
   final String _organization = 'organization';
   final String _role = 'role';
-  final String _runningTripOrderId = 'runningTripOrderId';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
   }
-
-  set runningTripOrderId(int value) {
-    _shared?.setInt(_runningTripOrderId, value);
-  }
-
-  int get runningTripOrderId => _shared?.getInt(_runningTripOrderId) ?? -1;
 
   set isLogged(bool value) => _shared?.setBool(_isLogged, value);
   bool get isLogged => _shared?.getBool(_isLogged) ?? false;
