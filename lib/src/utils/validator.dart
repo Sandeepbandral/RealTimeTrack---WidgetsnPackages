@@ -15,9 +15,16 @@ class Validator {
     }
   }
 
-  static String? fullNameValidator(String? value) {
+  static String? firstNameValidator(String? value) {
     if (value != null && value.isEmpty) {
-      return 'Please enter full name';
+      return 'Please enter first name';
+    }
+    return null;
+  }
+
+  static String? lastNameValidator(String? value) {
+    if (value != null && value.isEmpty) {
+      return 'Please enter last name';
     }
     return null;
   }
