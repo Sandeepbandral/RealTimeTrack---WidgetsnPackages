@@ -17,11 +17,12 @@ class FileUtils {
     }
   }
 
-  static Future<List<XFile>> pickMultiImage() async {
+  static Future<List<File>> pickMultiImage() async {
     try {
-      return await _picker.pickMultiImage();
+      List<XFile> files = await _picker.pickMultiImage();
+      return files.map((e) => File(e.path)).toList();
     } catch (e) {
-      return <XFile>[];
+      return <File>[];
     }
   }
 }
