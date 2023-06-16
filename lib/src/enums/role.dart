@@ -1,1 +1,7 @@
-enum Role { unknown, superAdmin, organizationAdmin, headDriver }
+enum Role {
+  unknown,
+  superAdmin,
+  organizationAdmin,
+  headDriver,
+  associateDriver
+}
