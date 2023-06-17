@@ -67,4 +67,6 @@ class RttAssets {
 
   static String locationPin = 'assets/icons/location_pin.png';
   static String currentLocation = 'assets/icons/current_location.png';
+
+  static String truckPng = 'assets/icons/truck.png';
 }
