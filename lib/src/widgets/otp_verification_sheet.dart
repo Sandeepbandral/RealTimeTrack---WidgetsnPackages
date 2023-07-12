@@ -179,7 +179,6 @@ class _OtpVerificationState extends State<OtpVerification> {
 
                           Future.delayed(const Duration(seconds: 2), () {
                             widget.onOtpVerified(verified);
-                            Navigator.pop(context);
                           });
                         }
                       },
