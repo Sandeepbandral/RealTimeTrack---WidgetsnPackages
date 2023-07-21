@@ -69,4 +69,10 @@ class RttAssets {
   static String currentLocation = 'assets/icons/current_location.png';
 
   static String truckPng = 'assets/icons/truck.png';
+
+  static String defaultStatus = 'assets/icons/default_status.png';
+  static String processed = 'assets/icons/processed.png';
+  static String shipped = 'assets/icons/shipped.png';
+  static String enRoute = 'assets/icons/en_route.png';
+  static String delivered = 'assets/icons/delivered.png';
 }
