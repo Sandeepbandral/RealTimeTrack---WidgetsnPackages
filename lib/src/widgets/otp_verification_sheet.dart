@@ -11,12 +11,14 @@ typedef OtpVerifificationCallback = Future<bool> Function(String otpCode);
 typedef OtpVerifiedCallback = void Function(bool verified);
 
 class OtpVerification extends StatefulWidget {
+  final String phoneNumber;
   final VoidCallback onOtpResended;
   final OtpVerifificationCallback onOtpVerification;
   final OtpVerifiedCallback onOtpVerified;
 
   const OtpVerification({
     super.key,
+    required this.phoneNumber,
     required this.onOtpResended,
     required this.onOtpVerified,
     required this.onOtpVerification,
@@ -24,6 +26,7 @@ class OtpVerification extends StatefulWidget {
 
   static Future<void> show(
     BuildContext context, {
+    required String phoneNumber,
     required VoidCallback onOtpResended,
     required OtpVerifificationCallback onOtpVerification,
     required OtpVerifiedCallback onOtpVerified,
@@ -37,6 +40,7 @@ class OtpVerification extends StatefulWidget {
         return WillPopScope(
           onWillPop: () async => false,
           child: OtpVerification(
+            phoneNumber: phoneNumber,
             onOtpResended: onOtpResended,
             onOtpVerification: onOtpVerification,
             onOtpVerified: onOtpVerified,
@@ -126,7 +130,7 @@ class _OtpVerificationState extends State<OtpVerification> {
               const HeadingText(title: 'Enter OTP'),
               const SizedBoxH5(),
               Text(
-                'Lorem ipsum text here',
+                'We have sent you an sms with code to the ${widget.phoneNumber}',
                 style: textTheme.titleMedium?.copyWith(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
