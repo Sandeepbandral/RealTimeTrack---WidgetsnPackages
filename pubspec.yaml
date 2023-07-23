@@ -21,6 +21,7 @@ dependencies:
   device_info_plus: ^8.2.2
   url_launcher: ^6.1.11
   image_picker: ^0.8.7+5
+  photo_view: ^0.14.0
   
 dev_dependencies:
   flutter_test:

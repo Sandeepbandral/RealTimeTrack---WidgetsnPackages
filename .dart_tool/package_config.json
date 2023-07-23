@@ -338,6 +338,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "photo_view",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/photo_view-0.14.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "pin_code_fields",
       "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/pin_code_fields-7.4.0",
       "packageUri": "lib/",
@@ -566,7 +572,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-05-22T15:18:18.581871Z",
+  "generated": "2023-07-23T11:34:03.260602Z",
   "generator": "pub",
-  "generatorVersion": "3.0.1"
+  "generatorVersion": "3.0.6"
 }
