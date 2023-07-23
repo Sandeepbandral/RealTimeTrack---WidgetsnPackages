@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
@@ -184,6 +185,8 @@ class _OtpVerificationState extends State<OtpVerification> {
                           Future.delayed(const Duration(seconds: 2), () {
                             widget.onOtpVerified(verified);
                           });
+                        } else {
+                          Fluttertoast.showToast(msg: 'Enter 6 digit OTP code');
                         }
                       },
                       icon: const Icon(
