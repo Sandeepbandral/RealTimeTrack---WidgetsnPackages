@@ -131,7 +131,7 @@ class _OtpVerificationState extends State<OtpVerification> {
               const HeadingText(title: 'Enter OTP'),
               const SizedBoxH5(),
               Text(
-                'We have sent you an sms with code to the ${widget.phoneNumber}',
+                'Please enter OTP sent to you mobile no. ${widget.phoneNumber}',
                 style: textTheme.titleMedium?.copyWith(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
@@ -186,7 +186,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                             widget.onOtpVerified(verified);
                           });
                         } else {
-                          Fluttertoast.showToast(msg: 'Enter 6 digit OTP code');
+                          Fluttertoast.showToast(msg: 'Enter the OTP');
                         }
                       },
                       icon: const Icon(
