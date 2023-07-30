@@ -76,6 +76,6 @@ class RttAssets {
   static String enRoute = 'assets/icons/en_route.png';
   static String delivered = 'assets/icons/delivered.png';
 
-  static String dislike = 'assets/icons/dislike.svg';
-  static String like = 'assets/icons/like.svg';
+  static String dislike = 'assets/icons/dislike.png';
+  static String like = 'assets/icons/like.png';
 }
