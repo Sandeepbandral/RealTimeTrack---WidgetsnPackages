@@ -12,8 +12,12 @@ class Preferences {
 
   final String _isLogged = 'is_logged';
   final String _tokens = 'tokens';
+
+  // Only For Drivers
   final String _organization = 'organization';
   final String _role = 'role';
+  final String _locationRefreshRate = 'location_refresh_rate';
+  final String _keepScreenOn = 'keep_screen_on';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
@@ -36,6 +40,17 @@ class Preferences {
     }
     return null;
   }
+
+  set locationRefreshRate(Duration value) {
+    _shared?.setInt(_locationRefreshRate, value.inSeconds);
+  }
+
+  Duration get locationRefreshRate {
+    return Duration(seconds: _shared?.getInt(_locationRefreshRate) ?? 0);
+  }
+
+  set keepScreenOn(bool value) => _shared?.setBool(_keepScreenOn, value);
+  bool get keepScreenOn => _shared?.getBool(_keepScreenOn) ?? false;
 
   set tokens(Tokens value) {
     _shared?.setString(_tokens, jsonEncode(value.toMap()));
