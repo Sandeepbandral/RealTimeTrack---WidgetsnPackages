@@ -18,6 +18,7 @@ class Preferences {
   final String _role = 'role';
   final String _locationRefreshRate = 'location_refresh_rate';
   final String _keepScreenOn = 'keep_screen_on';
+  final String _notifications = 'notifications';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
@@ -28,6 +29,9 @@ class Preferences {
 
   set role(Role value) => _shared?.setInt(_role, value.index);
   Role get role => Role.values[_shared?.getInt(_role) ?? 0];
+
+  set notifications(bool value) => _shared?.setBool(_notifications, value);
+  bool get notifications => _shared?.getBool(_notifications) ?? false;
 
   set organization(Organization? value) {
     _shared?.setString(_organization, jsonEncode(value?.toMap()));
