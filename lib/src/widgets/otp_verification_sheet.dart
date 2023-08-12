@@ -102,7 +102,8 @@ class _OtpVerificationState extends State<OtpVerification> {
 
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: Dimension.d6),
+        padding: const EdgeInsets.symmetric(horizontal: Dimension.d6)
+            .copyWith(bottom: MediaQuery.of(context).viewInsets.bottom),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
