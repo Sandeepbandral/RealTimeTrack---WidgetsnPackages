@@ -13,12 +13,14 @@ class Preferences {
   final String _isLogged = 'is_logged';
   final String _tokens = 'tokens';
 
+  // Only for Customer
+  final String _notifications = 'notifications';
+
   // Only For Drivers
   final String _organization = 'organization';
   final String _role = 'role';
   final String _locationRefreshRate = 'location_refresh_rate';
   final String _keepScreenOn = 'keep_screen_on';
-  final String _notifications = 'notifications';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
