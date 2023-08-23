@@ -35,7 +35,6 @@ class RttBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       showSelectedLabels: true,
       showUnselectedLabels: true,
-      unselectedLabelStyle: TextStyle(color: RttThemeData.darkGrey),
       items: items.map((item) {
         return BottomNavigationBarItem(
           label: item.label,

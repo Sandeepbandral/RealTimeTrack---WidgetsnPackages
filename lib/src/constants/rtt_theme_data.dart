@@ -45,7 +45,7 @@ class RttThemeData {
         ),
         unselectedLabelStyle: _textTheme.labelLarge?.copyWith(
           fontSize: 12,
-          color: const Color(0xffBBBFD0),
+          color: darkGrey,
         ),
       ),
       snackBarTheme: SnackBarThemeData(
