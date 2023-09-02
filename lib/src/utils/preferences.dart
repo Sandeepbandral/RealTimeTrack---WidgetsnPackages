@@ -12,7 +12,6 @@ class Preferences {
 
   final String _isLogged = 'is_logged';
   final String _tokens = 'tokens';
-  final String _defaultCountry = 'default_country';
 
   // Only for Customer
   final String _notifications = 'notifications';
@@ -38,17 +37,6 @@ class Preferences {
 
   set organization(Organization? value) {
     _shared?.setString(_organization, jsonEncode(value?.toMap()));
-  }
-
-  set defaultCountry(Country country) {
-    _shared?.setString(_defaultCountry, country.code);
-  }
-
-  Country get defaultCountry {
-    String countryCode = _shared?.getString(_defaultCountry) ?? 'US';
-    return Country.fromMap(
-      Countries.allCountries.firstWhere((e) => e['code'] == countryCode),
-    );
   }
 
   Organization? get organization {
