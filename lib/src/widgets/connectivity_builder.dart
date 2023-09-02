@@ -17,7 +17,7 @@ class ConnectivityBuilder extends StatefulWidget {
 }
 
 class _ConnectivityBuilderState extends State<ConnectivityBuilder> {
-  ConnectivityResult _connectivityResult = ConnectivityResult.none;
+  ConnectivityResult? _connectivityResult;
 
   bool get _isConnected {
     return _connectivityResult == ConnectivityResult.mobile ||
@@ -44,6 +44,7 @@ class _ConnectivityBuilderState extends State<ConnectivityBuilder> {
 
   @override
   Widget build(BuildContext context) {
+    if (_connectivityResult == null) return Loader.circularProgressIndicator();
     if (_isConnected) {
       return widget.builder(context);
     } else {
