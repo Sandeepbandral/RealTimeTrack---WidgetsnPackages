@@ -51,8 +51,6 @@ class Preferences {
     );
   }
 
-  bool get notifications => _shared?.getBool(_notifications) ?? false;
-
   Organization? get organization {
     String? encoded = _shared?.getString(_organization);
     if (encoded != null) {
