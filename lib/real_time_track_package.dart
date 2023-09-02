@@ -57,6 +57,7 @@ export 'src/widgets/image_picker_source_sheet.dart';
 export 'src/widgets/photo_viewer.dart';
 export 'src/widgets/swipe_button.dart';
 export 'src/widgets/dismiss_focus_overlay.dart';
+export 'src/widgets/connectivity_builder.dart';
 
 export 'src/extensions/text_theme_ex.dart';
 export 'src/extensions/widget_ex.dart';
