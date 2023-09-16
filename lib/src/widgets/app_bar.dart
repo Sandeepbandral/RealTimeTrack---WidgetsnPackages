@@ -4,10 +4,11 @@ class SecondaryAppBar extends PreferredSize {
   SecondaryAppBar(
     BuildContext context, {
     Key? key,
-    required String title,
+    String title = '',
     List<Widget>? actions,
     Color? backgroundColor,
     VoidCallback? onBackPressed,
+    Widget? titleWidget,
   }) : super(
           key: key,
           preferredSize: const Size.fromHeight(kToolbarHeight),
@@ -16,7 +17,7 @@ class SecondaryAppBar extends PreferredSize {
             leadingWidth: 70,
             titleSpacing: 0,
             backgroundColor: backgroundColor,
-            title: Text(title),
+            title: titleWidget ?? (title.isNotEmpty ? Text(title) : null),
             leading: IconButton(
               icon: const Padding(
                 padding: EdgeInsets.only(left: 10),
