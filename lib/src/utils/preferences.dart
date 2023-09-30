@@ -38,7 +38,11 @@ class Preferences {
   bool get notifications => _shared?.getBool(_notifications) ?? false;
 
   set organization(Organization? value) {
-    _shared?.setString(_organization, jsonEncode(value?.toMap()));
+    if (value == null) {
+      _shared?.remove(_organization);
+      return;
+    }
+    _shared?.setString(_organization, jsonEncode(value.toMap()));
   }
 
   Organization? get organization {
@@ -50,7 +54,11 @@ class Preferences {
   }
 
   set driverDeliveryTime(DriverDeliveryTime? value) {
-    _shared?.setString(_driverDeliveryTime, jsonEncode(value?.toMap()));
+    if (value == null) {
+      _shared?.remove(_driverDeliveryTime);
+      return;
+    }
+    _shared?.setString(_driverDeliveryTime, jsonEncode(value.toMap()));
   }
 
   DriverDeliveryTime? get driverDeliveryTime {
@@ -62,7 +70,11 @@ class Preferences {
   }
 
   set warehouse(Warehouse? value) {
-    _shared?.setString(_warehouse, jsonEncode(value?.toMap()));
+    if (value == null) {
+      _shared?.remove(_warehouse);
+      return;
+    }
+    _shared?.setString(_warehouse, jsonEncode(value.toMap()));
   }
 
   Warehouse? get warehouse {
