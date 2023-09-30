@@ -260,6 +260,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/intl-0.18.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "js",
       "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
@@ -620,7 +626,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-08-23T13:00:51.896131Z",
+  "generated": "2023-09-30T06:59:49.805090Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

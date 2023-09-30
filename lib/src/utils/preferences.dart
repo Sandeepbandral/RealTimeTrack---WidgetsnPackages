@@ -21,6 +21,7 @@ class Preferences {
   final String _role = 'role';
   final String _locationRefreshRate = 'location_refresh_rate';
   final String _keepScreenOn = 'keep_screen_on';
+  final String _driverDeliveryTime = 'driver_delivery_time';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
@@ -43,6 +44,18 @@ class Preferences {
     String? encoded = _shared?.getString(_organization);
     if (encoded != null) {
       return Organization.fromMap(jsonDecode(encoded));
+    }
+    return null;
+  }
+
+  set driverDeliveryTime(DriverDeliveryTime? value) {
+    _shared?.setString(_driverDeliveryTime, jsonEncode(value?.toMap()));
+  }
+
+  DriverDeliveryTime? get driverDeliveryTime {
+    String? encoded = _shared?.getString(_driverDeliveryTime);
+    if (encoded != null) {
+      return DriverDeliveryTime.fromMap(jsonDecode(encoded));
     }
     return null;
   }
