@@ -22,6 +22,7 @@ export 'src/models/tokens.dart';
 export 'src/models/base_response.dart';
 export 'src/models/organization_model.dart';
 export 'src/models/driver_delivery_time.dart';
+export 'src/models/warehouse_model.dart';
 
 export 'src/utils/validator.dart';
 export 'src/utils/preferences.dart';

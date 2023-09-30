@@ -22,6 +22,7 @@ class Preferences {
   final String _locationRefreshRate = 'location_refresh_rate';
   final String _keepScreenOn = 'keep_screen_on';
   final String _driverDeliveryTime = 'driver_delivery_time';
+  final String _warehouse = 'warehouse';
 
   static Future<void> init() async {
     _shared = await SharedPreferences.getInstance();
@@ -56,6 +57,18 @@ class Preferences {
     String? encoded = _shared?.getString(_driverDeliveryTime);
     if (encoded != null) {
       return DriverDeliveryTime.fromMap(jsonDecode(encoded));
+    }
+    return null;
+  }
+
+  set warehouse(Warehouse? value) {
+    _shared?.setString(_warehouse, jsonEncode(value?.toMap()));
+  }
+
+  Warehouse? get warehouse {
+    String? encoded = _shared?.getString(_warehouse);
+    if (encoded != null) {
+      return Warehouse.fromMap(jsonDecode(encoded));
     }
     return null;
   }
