@@ -35,13 +35,12 @@ class RttBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       showSelectedLabels: true,
       showUnselectedLabels: true,
+      unselectedItemColor: RttThemeData.darkGrey,
       items: items.map((item) {
         return BottomNavigationBarItem(
           label: item.label,
-          icon: _buildImageIcon(
-            item.icon,
-            size: item.size,
-          ),
+          icon: _buildImageIcon(item.icon,
+              size: item.size, color: RttThemeData.darkGrey),
           activeIcon: _buildImageIcon(
             item.activeIcon,
             size: item.size,
@@ -51,7 +50,7 @@ class RttBottomNavigationBar extends StatelessWidget {
     );
   }
 
-  Widget _buildImageIcon(String imagePath, {double? size}) {
+  Widget _buildImageIcon(String imagePath, {double? size, Color? color}) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: SvgPicture.asset(
@@ -59,6 +58,7 @@ class RttBottomNavigationBar extends StatelessWidget {
         height: size ?? 22,
         width: size ?? 22,
         package: RealTimeTrac.name,
+        color: color,
       ),
     );
   }
