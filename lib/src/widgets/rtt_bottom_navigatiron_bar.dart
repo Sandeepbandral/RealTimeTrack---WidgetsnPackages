@@ -35,12 +35,15 @@ class RttBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       showSelectedLabels: true,
       showUnselectedLabels: true,
-      unselectedItemColor: RttThemeData.darkGrey,
+      unselectedItemColor: Colors.grey,
       items: items.map((item) {
         return BottomNavigationBarItem(
           label: item.label,
-          icon: _buildImageIcon(item.icon,
-              size: item.size, color: RttThemeData.darkGrey),
+          icon: _buildImageIcon(
+            item.icon,
+            size: item.size,
+            color: Colors.grey,
+          ),
           activeIcon: _buildImageIcon(
             item.activeIcon,
             size: item.size,
