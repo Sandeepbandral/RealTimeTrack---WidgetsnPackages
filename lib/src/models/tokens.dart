@@ -13,9 +13,13 @@ class Tokens {
     );
   }
 
-  Jwt get jwt {
-    Map<String, dynamic> decodedToken = JwtDecoder.decode(accessToken ?? '');
-    return Jwt.fromMap(decodedToken);
+  Jwt? get jwt {
+    try {
+      Map<String, dynamic> decodedToken = JwtDecoder.decode(accessToken ?? '');
+      return Jwt.fromMap(decodedToken);
+    } on FormatException {
+      return null;
+    }
   }
 
   Tokens replaceAccessToken(String accessToken) {
