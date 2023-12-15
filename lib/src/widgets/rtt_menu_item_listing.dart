@@ -38,10 +38,14 @@ class RttMenuItemListing extends StatelessWidget {
             ? SvgPicture.asset(
                 item.icon,
                 package: RealTimeTrac.name,
+                height: item.iconSize,
+                width: item.iconSize,
               )
             : Image.asset(
                 item.icon,
                 package: RealTimeTrac.name,
+                height: item.iconSize,
+                width: item.iconSize,
               ),
       ),
       title: Text(
