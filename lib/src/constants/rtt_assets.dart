@@ -10,7 +10,7 @@ class RttAssets {
   static String myOrdersLine = 'assets/icons/my_orders_line.svg';
   static String myOrderFill = 'assets/icons/my_orders_fill.svg';
   static String userLine = 'assets/icons/user_line.svg';
-  static String userFill = 'assets/icons/user_line.svg';
+  static String userFill = 'assets/icons/user_fill.svg';
   static String manageOrdersLine = 'assets/icons/manage_orders_line.svg';
   static String manageOrdersFill = 'assets/icons/manage_orders_fill.svg';
 
