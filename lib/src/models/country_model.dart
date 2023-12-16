@@ -20,9 +20,9 @@ class Country {
     );
   }
 
-  factory Country.us() {
+  factory Country.ca() {
     return Country.fromMap(
-      Countries.allCountries.firstWhere((e) => e['code'] == 'US'),
+      Countries.allCountries.firstWhere((e) => e['code'] == 'CA'),
     );
   }
   @override
