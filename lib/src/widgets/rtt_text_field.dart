@@ -26,6 +26,7 @@ class RttTextField extends StatelessWidget {
   final double? fontSize;
   final bool? enabled;
   final bool? enableInteractiveSelection;
+  final ValueChanged<String>? onFieldSubmitted;
 
   const RttTextField({
     Key? key,
@@ -52,6 +53,7 @@ class RttTextField extends StatelessWidget {
     this.fontSize,
     this.enabled,
     this.enableInteractiveSelection,
+    this.onFieldSubmitted,
   }) : super(key: key);
 
   @override
@@ -117,6 +119,7 @@ class RttTextField extends StatelessWidget {
       enabled: enabled,
       maxLength: maxLength,
       textCapitalization: textCapitalization,
+      onFieldSubmitted: onFieldSubmitted,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
