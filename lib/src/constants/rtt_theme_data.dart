@@ -22,6 +22,8 @@ class RttThemeData {
       fontFamily: _gilroy,
       unselectedWidgetColor: lightGrey.withOpacity(0.7),
       appBarTheme: AppBarTheme(
+        iconTheme: IconThemeData(color: colorScheme.primary),
+        actionsIconTheme: IconThemeData(color: colorScheme.primary),
         backgroundColor: colorScheme.onBackground,
         elevation: 0,
         centerTitle: false,
@@ -29,7 +31,6 @@ class RttThemeData {
           fontSize: 18,
           color: Colors.black,
         ),
-        iconTheme: IconThemeData(color: colorScheme.primary),
       ),
       iconTheme: IconThemeData(color: colorScheme.onPrimary),
       canvasColor: colorScheme.background,
