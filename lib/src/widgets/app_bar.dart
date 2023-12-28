@@ -17,6 +17,7 @@ class SecondaryAppBar extends PreferredSize {
             leadingWidth: 70,
             titleSpacing: 0,
             backgroundColor: backgroundColor,
+            scrolledUnderElevation: 0,
             title: titleWidget ?? (title.isNotEmpty ? Text(title) : null),
             leading: IconButton(
               icon: const Padding(

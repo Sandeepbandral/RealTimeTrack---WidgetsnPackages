@@ -20,6 +20,7 @@ class RttThemeData {
       colorScheme: colorScheme,
       textTheme: _textTheme,
       fontFamily: _gilroy,
+      useMaterial3: false,
       unselectedWidgetColor: lightGrey.withOpacity(0.7),
       appBarTheme: AppBarTheme(
         scrolledUnderElevation: 0,
