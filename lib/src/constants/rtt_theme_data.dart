@@ -102,16 +102,56 @@ class RttThemeData {
   static const FontWeight _bold = FontWeight.w700;
 
   static const TextTheme _textTheme = TextTheme(
-    headlineMedium: TextStyle(fontWeight: _semiBold, fontSize: 20.0),
-    bodySmall: TextStyle(fontWeight: _semiBold, fontSize: 16.0),
-    headlineSmall: TextStyle(fontWeight: _medium, fontSize: 16.0),
-    titleMedium: TextStyle(fontWeight: _medium, fontSize: 16.0),
-    labelSmall: TextStyle(fontWeight: _medium, fontSize: 12.0),
-    bodyLarge: TextStyle(fontWeight: _regular, fontSize: 14.0),
-    titleSmall: TextStyle(fontWeight: _medium, fontSize: 14.0),
-    bodyMedium: TextStyle(fontWeight: _regular, fontSize: 16.0),
-    titleLarge: TextStyle(fontWeight: _bold, fontSize: 16.0),
-    labelLarge: TextStyle(fontWeight: _semiBold, fontSize: 14.0),
+    headlineMedium: TextStyle(
+      fontWeight: _semiBold,
+      fontSize: 20.0,
+      color: Colors.black,
+    ),
+    bodySmall: TextStyle(
+      fontWeight: _semiBold,
+      fontSize: 16.0,
+      color: Colors.black,
+    ),
+    headlineSmall: TextStyle(
+      fontWeight: _medium,
+      fontSize: 16.0,
+      color: Colors.black,
+    ),
+    titleMedium: TextStyle(
+      fontWeight: _medium,
+      fontSize: 16.0,
+      color: Colors.black,
+    ),
+    labelSmall: TextStyle(
+      fontWeight: _medium,
+      fontSize: 12.0,
+      color: Colors.black,
+    ),
+    bodyLarge: TextStyle(
+      fontWeight: _regular,
+      fontSize: 14.0,
+      color: Colors.black,
+    ),
+    titleSmall: TextStyle(
+      fontWeight: _medium,
+      fontSize: 14.0,
+      color: Colors.black,
+    ),
+    bodyMedium: TextStyle(
+      fontWeight: _regular,
+      fontSize: 16.0,
+      color: Colors.black,
+    ),
+    titleLarge: TextStyle(
+      fontWeight: _bold,
+      fontSize: 16.0,
+      color: Colors.black,
+    ),
+    labelLarge: TextStyle(
+      fontWeight: _semiBold,
+      fontSize: 14.0,
+      color: Colors.black,
+    ),
   );
 
   static MaterialColor generateMaterialColor(Color color) {

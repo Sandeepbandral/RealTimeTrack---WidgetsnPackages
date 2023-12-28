@@ -73,8 +73,9 @@ class RttTextField extends StatelessWidget {
             ),
             child: Text(
               labelText ?? '',
-              style:
-                  textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600),
+              style: textTheme.titleSmall?.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         if (maxHeight != null) ...[
@@ -104,8 +105,10 @@ class RttTextField extends StatelessWidget {
       enableInteractiveSelection: enableInteractiveSelection,
       autocorrect: false,
       autofocus: false,
-      style: textTheme.titleMedium
-          ?.copyWith(fontSize: fontSize ?? 16, fontWeight: FontWeight.w400),
+      style: textTheme.titleMedium?.copyWith(
+        fontSize: fontSize ?? 16,
+        fontWeight: FontWeight.w400,
+      ),
       controller: controller,
       validator: validator,
       onChanged: onChanged,
