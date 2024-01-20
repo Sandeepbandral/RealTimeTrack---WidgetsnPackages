@@ -15,9 +15,9 @@ class CountryPicker extends StatefulWidget {
         borderRadius: BorderRadius.circular(Dimension.d4),
       ),
       builder: (context) {
-        return WillPopScope(
-          onWillPop: () async => false,
-          child: const CountryPicker(),
+        return const PopScope(
+          canPop: false,
+          child: CountryPicker(),
         );
       },
     );

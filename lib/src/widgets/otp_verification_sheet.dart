@@ -38,8 +38,8 @@ class OtpVerification extends StatefulWidget {
       enableDrag: false,
       isScrollControlled: true,
       builder: (context) {
-        return WillPopScope(
-          onWillPop: () async => false,
+        return PopScope(
+          canPop: false,
           child: OtpVerification(
             phoneNumber: phoneNumber,
             onOtpResended: onOtpResended,
