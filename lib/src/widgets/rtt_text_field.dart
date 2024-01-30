@@ -24,6 +24,7 @@ class RttTextField extends StatelessWidget {
   final int? maxLength;
   final double? maxHeight;
   final double? fontSize;
+  final double? hintFontSize;
   final bool? enabled;
   final bool? enableInteractiveSelection;
   final ValueChanged<String>? onFieldSubmitted;
@@ -51,6 +52,7 @@ class RttTextField extends StatelessWidget {
     this.maxLength,
     this.maxHeight,
     this.fontSize,
+    this.hintFontSize,
     this.enabled,
     this.enableInteractiveSelection,
     this.onFieldSubmitted,
@@ -132,7 +134,7 @@ class RttTextField extends StatelessWidget {
         suffixIcon: suffixIcon,
         errorStyle: textTheme.errorStyle,
         hintStyle: textTheme.titleMedium?.copyWith(
-          fontSize: 16,
+          fontSize: hintFontSize ?? 16,
           fontWeight: FontWeight.w400,
           color: hintColor ?? Colors.grey.shade400,
         ),
