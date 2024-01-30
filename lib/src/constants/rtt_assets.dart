@@ -81,4 +81,6 @@ class RttAssets {
 
   static String dislike = 'assets/icons/dislike.svg';
   static String like = 'assets/icons/like.svg';
+
+  static String feedback = 'assets/icons/feedback.svg';
 }
