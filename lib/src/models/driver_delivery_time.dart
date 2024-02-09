@@ -3,10 +3,11 @@ import 'package:intl/intl.dart';
 class DriverDeliveryTime {
   final DateTime? lastDeliveryTime;
   final DateTime? timeToBackWarehouse;
-  final double? distance;
 
-  const DriverDeliveryTime(
-      {this.lastDeliveryTime, this.timeToBackWarehouse, this.distance});
+  const DriverDeliveryTime({
+    this.lastDeliveryTime,
+    this.timeToBackWarehouse,
+  });
 
   factory DriverDeliveryTime.fromMap(Map<String, dynamic> map) {
     DateFormat format = DateFormat('hh:mm a');
@@ -18,7 +19,6 @@ class DriverDeliveryTime {
       timeToBackWarehouse: map['time_to_back_warehouse'] != null
           ? format.parse(map['time_to_back_warehouse'])
           : null,
-      distance: map['distance'],
     );
   }
 
@@ -30,7 +30,6 @@ class DriverDeliveryTime {
       'time_to_back_warehouse': timeToBackWarehouse != null
           ? format.format(timeToBackWarehouse!)
           : null,
-      'distance': distance
     };
   }
 }
