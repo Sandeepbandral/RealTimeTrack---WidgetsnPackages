@@ -284,6 +284,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "map_launcher",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/map_launcher-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/matcher-0.12.16",
       "packageUri": "lib/",
@@ -632,7 +638,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2024-01-20T05:05:35.068113Z",
+  "generated": "2024-02-13T09:07:46.336221Z",
   "generator": "pub",
   "generatorVersion": "3.2.5"
 }

@@ -30,6 +30,8 @@ export 'src/utils/url_launcher.dart';
 export 'src/utils/snack_bar_utils.dart';
 export 'src/utils/file_utils.dart';
 export 'src/utils/google_map_utils.dart';
+export 'src/utils/map_launcher_sheet.dart';
+export 'package:map_launcher/map_launcher.dart' show Coords;
 
 export 'src/helpers/circle_thumb_shape.dart';
 export 'src/helpers/exceptions.dart';
