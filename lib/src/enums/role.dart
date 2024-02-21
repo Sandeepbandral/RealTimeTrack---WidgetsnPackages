@@ -3,8 +3,8 @@ enum Role {
   superAdmin(id: 1),
   organizationAdmin(id: 2),
   headDriver(id: 3),
-  customer(id: 4),
-  associateDriver(id: 5);
+  associateDriver(id: 4),
+  customer(id: 5);
 
   final int id;
 
