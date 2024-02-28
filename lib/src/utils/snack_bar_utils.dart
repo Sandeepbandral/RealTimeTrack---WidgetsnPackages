@@ -9,7 +9,11 @@ const SnackBarBehavior _kSnackBarBehavior = SnackBarBehavior.floating;
 class SnackBarUtils {
   SnackBarUtils._();
 
-  static SnackBar snackBar({required String message, Duration? duration}) {
+  static SnackBar snackBar({
+    required String message,
+    Duration? duration,
+    SnackBarAction? action,
+  }) {
     Color color = Colors.black;
 
     return SnackBar(
@@ -22,6 +26,7 @@ class SnackBarUtils {
           fontWeight: FontWeight.w500,
         ),
       ),
+      action: action,
       backgroundColor: color,
       behavior: _kSnackBarBehavior,
       duration: duration ?? _kDuration3000ms,
