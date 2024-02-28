@@ -14,11 +14,16 @@ extension BuildContextEx on BuildContext {
 
   ColorScheme get colorScheme => theme.colorScheme;
 
-  void showSnackBar(String message,
-      {Duration? duration, VoidCallback? onInit}) {
+  void showSnackBar(
+    String message, {
+    Duration? duration,
+    VoidCallback? onInit,
+    SnackBarAction? action,
+  }) {
     SnackBar snackBar = SnackBarUtils.snackBar(
       message: message,
       duration: duration,
+      action: action,
     );
     ScaffoldMessenger.of(this).showSnackBar(snackBar);
     if (onInit != null) onInit();
