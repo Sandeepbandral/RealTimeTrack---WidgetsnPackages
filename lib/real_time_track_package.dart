@@ -40,6 +40,7 @@ export 'src/helpers/result.dart';
 
 export 'src/services/connectivity_service.dart';
 export 'src/services/platform_service.dart';
+export 'src/services/web_socket_client.dart';
 
 export 'src/widgets/app_lifecycle_reactor.dart';
 export 'src/widgets/flexible_scroll_view.dart';
