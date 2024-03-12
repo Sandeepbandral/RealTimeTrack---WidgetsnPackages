@@ -115,15 +115,18 @@ class _OtpVerificationState extends State<OtpVerification> {
               const Center(child: HeadingText(title: 'OTP Verified')),
               const SizedBoxH20(),
               Center(
-                child: AvatarGlow(
-                  glowColor: colorScheme.primary,
-                  duration: const Duration(milliseconds: 1500),
-                  repeat: true,
-                  child: SizedBox.square(
-                    dimension: 90,
-                    child: SvgPicture.asset(
-                      RttAssets.success,
-                      package: RealTimeTrac.name,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  child: AvatarGlow(
+                    glowColor: colorScheme.primary,
+                    duration: const Duration(milliseconds: 1500),
+                    repeat: true,
+                    child: SizedBox.square(
+                      dimension: 90,
+                      child: SvgPicture.asset(
+                        RttAssets.success,
+                        package: RealTimeTrac.name,
+                      ),
                     ),
                   ),
                 ),
