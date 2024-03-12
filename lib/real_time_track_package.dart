@@ -74,6 +74,9 @@ export 'src/app/app_config.dart';
 
 export 'package:image_picker/image_picker.dart' show ImageSource;
 
+export 'package:connectivity_plus/connectivity_plus.dart';
+export 'package:flutter_svg/flutter_svg.dart';
+
 class RealTimeTrac {
   RealTimeTrac._();
 
