@@ -55,6 +55,11 @@ class Organization {
     );
   }
 
+  String get updateOrderStatusWsURL {
+    String? url = domainUrl?.replaceAll('https', 'ws').replaceAll('http', 'ws');
+    return '$url:8001/update-order-status/$schemaName/';
+  }
+
   Map<String, dynamic> toMap() {
     return {
       'id': id,
