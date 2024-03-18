@@ -18,15 +18,17 @@ class ImageView extends StatelessWidget {
   final String? imageUrl;
   final double height;
   final double width;
+  final BoxFit fit;
   final ImageRadius radius;
 
   const ImageView({
-    Key? key,
+    super.key,
     required this.imageUrl,
     this.height = 0,
     this.width = 0,
+    this.fit = BoxFit.cover,
     this.radius = const ImageRadius.radiusWithValue(radius: 8),
-  }) : super(key: key);
+  });
 
   double get borderRadius {
     return radius.value == double.infinity ? height / 2 : radius.value;
@@ -46,7 +48,7 @@ class ImageView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(borderRadius),
                   image: DecorationImage(
                     image: image,
-                    fit: BoxFit.cover,
+                    fit: fit,
                     filterQuality: FilterQuality.high,
                   ),
                 ),
