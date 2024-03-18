@@ -53,6 +53,8 @@ class RttAssets {
   static String dAssigned = 'assets/icons/d_assigned.svg';
   static String p = 'assets/icons/p.svg';
   static String pAssigned = 'assets/icons/p_assigned.svg';
+  static String w = 'assets/icons/w.svg';
+  static String wAssigned = 'assets/icons/w_assigned.svg';
 
   static String calendar = 'assets/icons/calendar.svg';
   static String clock = 'assets/icons/clock.svg';
