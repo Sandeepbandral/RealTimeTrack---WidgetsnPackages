@@ -19,6 +19,7 @@ class ImageView extends StatelessWidget {
   final double height;
   final double width;
   final BoxFit fit;
+  final Color? backgroundColor;
   final ImageRadius radius;
 
   const ImageView({
@@ -27,6 +28,7 @@ class ImageView extends StatelessWidget {
     this.height = 0,
     this.width = 0,
     this.fit = BoxFit.cover,
+    this.backgroundColor,
     this.radius = const ImageRadius.radiusWithValue(radius: 8),
   });
 
@@ -44,7 +46,7 @@ class ImageView extends StatelessWidget {
             imageBuilder: (context, image) {
               return Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
+                  color: backgroundColor ?? Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(borderRadius),
                   image: DecorationImage(
                     image: image,
