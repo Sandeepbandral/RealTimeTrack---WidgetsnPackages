@@ -27,6 +27,7 @@ class RttAssets {
   static String addOrder = 'assets/icons/add_order.svg';
   static String truckLine = 'assets/icons/truck_line.svg';
   static String manageAddresses = 'assets/icons/manage_addresses.png';
+  static String lock = 'assets/icons/lock.png';
 
   static String notification = 'assets/icons/notification.svg';
   static String text = 'assets/icons/text.svg';
