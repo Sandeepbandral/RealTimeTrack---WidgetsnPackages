@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
 class CountryPicker extends StatefulWidget {
-  const CountryPicker({Key? key}) : super(key: key);
+  const CountryPicker({super.key});
 
   static Future<Country?> show(BuildContext context) async {
     return await showModalBottomSheet<Country?>(

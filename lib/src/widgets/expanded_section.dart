@@ -6,11 +6,11 @@ class ExpandedSection extends StatefulWidget {
   final int duration;
 
   const ExpandedSection({
-    Key? key,
+    super.key,
     required this.expand,
     this.duration = 300,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   ExpandedSectionState createState() => ExpandedSectionState();

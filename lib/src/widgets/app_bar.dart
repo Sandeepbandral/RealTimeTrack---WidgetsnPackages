@@ -3,14 +3,13 @@ import 'package:flutter/material.dart';
 class SecondaryAppBar extends PreferredSize {
   SecondaryAppBar(
     BuildContext context, {
-    Key? key,
+    super.key,
     String title = '',
     List<Widget>? actions,
     Color? backgroundColor,
     VoidCallback? onBackPressed,
     Widget? titleWidget,
   }) : super(
-          key: key,
           preferredSize: const Size.fromHeight(kToolbarHeight),
           child: AppBar(
             actions: actions,

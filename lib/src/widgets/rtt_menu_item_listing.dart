@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
 class RttMenuItemListing extends StatelessWidget {

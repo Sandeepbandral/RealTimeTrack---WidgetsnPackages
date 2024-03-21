@@ -14,7 +14,7 @@ class RttTextButton extends StatelessWidget {
   final double? radius;
 
   const RttTextButton({
-    Key? key,
+    super.key,
     required this.label,
     required this.onPressed,
     this.fontSize,
@@ -23,11 +23,10 @@ class RttTextButton extends StatelessWidget {
     this.direction,
     this.radius,
     this.color,
-  })  : icon = null,
-        super(key: key);
+  }) : icon = null;
 
   const RttTextButton.icon({
-    Key? key,
+    super.key,
     required this.label,
     required this.icon,
     this.fontSize,
@@ -37,7 +36,7 @@ class RttTextButton extends StatelessWidget {
     this.radius,
     this.color,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

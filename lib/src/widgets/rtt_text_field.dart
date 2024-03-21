@@ -30,7 +30,7 @@ class RttTextField extends StatelessWidget {
   final ValueChanged<String>? onFieldSubmitted;
 
   const RttTextField({
-    Key? key,
+    super.key,
     this.hintText,
     this.labelText,
     required this.controller,
@@ -56,7 +56,7 @@ class RttTextField extends StatelessWidget {
     this.enabled,
     this.enableInteractiveSelection,
     this.onFieldSubmitted,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

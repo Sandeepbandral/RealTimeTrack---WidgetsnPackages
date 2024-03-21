@@ -1,5 +1,6 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
 class RttBottomNavigationBarItem {
@@ -22,11 +23,11 @@ class RttBottomNavigationBar extends StatelessWidget {
   final ValueChanged<int> onTap;
 
   const RttBottomNavigationBar({
-    Key? key,
+    super.key,
     required this.currentIndex,
     required this.onTap,
     required this.items,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

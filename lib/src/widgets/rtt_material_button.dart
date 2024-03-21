@@ -19,7 +19,7 @@ class RttMaterialButton extends StatelessWidget {
   final TextDirection? textDirection;
 
   const RttMaterialButton({
-    Key? key,
+    super.key,
     required this.label,
     this.color,
     this.fontSize,
@@ -34,11 +34,10 @@ class RttMaterialButton extends StatelessWidget {
   })  : outlined = false,
         borderColor = null,
         icon = null,
-        textDirection = null,
-        super(key: key);
+        textDirection = null;
 
   const RttMaterialButton.outlined({
-    Key? key,
+    super.key,
     required this.label,
     this.width,
     this.color,
@@ -53,11 +52,10 @@ class RttMaterialButton extends StatelessWidget {
     this.borderColor,
     this.textColor,
   })  : outlined = true,
-        textDirection = null,
-        super(key: key);
+        textDirection = null;
 
   const RttMaterialButton.icon({
-    Key? key,
+    super.key,
     required this.label,
     required this.icon,
     this.width,
@@ -72,8 +70,7 @@ class RttMaterialButton extends StatelessWidget {
     this.textColor,
     this.textDirection,
   })  : outlined = false,
-        borderColor = null,
-        super(key: key);
+        borderColor = null;
 
   @override
   Widget build(BuildContext context) {

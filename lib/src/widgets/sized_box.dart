@@ -2,65 +2,65 @@ import 'package:flutter/material.dart';
 import 'package:real_time_track_package/src/constants/dimension.dart';
 
 class SizedBoxH5 extends SizedBox {
-  const SizedBoxH5({Key? key}) : super(key: key, height: Dimension.d1);
+  const SizedBoxH5({super.key}) : super(height: Dimension.d1);
 }
 
 class SizedBoxH10 extends SizedBox {
-  const SizedBoxH10({Key? key}) : super(key: key, height: Dimension.d2);
+  const SizedBoxH10({super.key}) : super(height: Dimension.d2);
 }
 
 class SizedBoxH15 extends SizedBox {
-  const SizedBoxH15({Key? key}) : super(key: key, height: Dimension.d3);
+  const SizedBoxH15({super.key}) : super(height: Dimension.d3);
 }
 
 class SizedBoxH20 extends SizedBox {
-  const SizedBoxH20({Key? key}) : super(key: key, height: Dimension.d4);
+  const SizedBoxH20({super.key}) : super(height: Dimension.d4);
 }
 
 class SizedBoxH25 extends SizedBox {
-  const SizedBoxH25({Key? key}) : super(key: key, height: Dimension.d5);
+  const SizedBoxH25({super.key}) : super(height: Dimension.d5);
 }
 
 class SizedBoxH30 extends SizedBox {
-  const SizedBoxH30({Key? key}) : super(key: key, height: Dimension.d6);
+  const SizedBoxH30({super.key}) : super(height: Dimension.d6);
 }
 
 class SizedBoxH40 extends SizedBox {
-  const SizedBoxH40({Key? key}) : super(key: key, height: Dimension.d8);
+  const SizedBoxH40({super.key}) : super(height: Dimension.d8);
 }
 
 class SizedBoxH50 extends SizedBox {
-  const SizedBoxH50({Key? key}) : super(key: key, height: Dimension.d10);
+  const SizedBoxH50({super.key}) : super(height: Dimension.d10);
 }
 
 class SizedBoxW5 extends SizedBox {
-  const SizedBoxW5({Key? key}) : super(key: key, width: Dimension.d1);
+  const SizedBoxW5({super.key}) : super(width: Dimension.d1);
 }
 
 class SizedBoxW10 extends SizedBox {
-  const SizedBoxW10({Key? key}) : super(key: key, width: Dimension.d2);
+  const SizedBoxW10({super.key}) : super(width: Dimension.d2);
 }
 
 class SizedBoxW15 extends SizedBox {
-  const SizedBoxW15({Key? key}) : super(key: key, width: Dimension.d3);
+  const SizedBoxW15({super.key}) : super(width: Dimension.d3);
 }
 
 class SizedBoxW20 extends SizedBox {
-  const SizedBoxW20({Key? key}) : super(key: key, width: Dimension.d4);
+  const SizedBoxW20({super.key}) : super(width: Dimension.d4);
 }
 
 class SizedBoxW25 extends SizedBox {
-  const SizedBoxW25({Key? key}) : super(key: key, width: Dimension.d5);
+  const SizedBoxW25({super.key}) : super(width: Dimension.d5);
 }
 
 class SizedBoxW30 extends SizedBox {
-  const SizedBoxW30({Key? key}) : super(key: key, width: Dimension.d6);
+  const SizedBoxW30({super.key}) : super(width: Dimension.d6);
 }
 
 class SizedBoxW40 extends SizedBox {
-  const SizedBoxW40({Key? key}) : super(key: key, width: Dimension.d8);
+  const SizedBoxW40({super.key}) : super(width: Dimension.d8);
 }
 
 class SizedBoxW50 extends SizedBox {
-  const SizedBoxW50({Key? key}) : super(key: key, width: Dimension.d10);
+  const SizedBoxW50({super.key}) : super(width: Dimension.d10);
 }

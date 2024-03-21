@@ -35,7 +35,7 @@ class SwipeButton extends StatefulWidget {
   final bool reset;
 
   const SwipeButton({
-    Key? key,
+    super.key,
     required this.child,
     this.thumb,
     this.activeThumbColor,
@@ -57,11 +57,10 @@ class SwipeButton extends StatefulWidget {
     this.duration = const Duration(milliseconds: 250),
   })  : assert(elevationThumb >= 0.0),
         assert(elevationTrack >= 0.0),
-        _swipeButtonType = _SwipeButtonType.swipe,
-        super(key: key);
+        _swipeButtonType = _SwipeButtonType.swipe;
 
   const SwipeButton.expand({
-    Key? key,
+    super.key,
     required this.child,
     this.thumb,
     this.activeThumbColor,
@@ -83,8 +82,7 @@ class SwipeButton extends StatefulWidget {
     this.duration = const Duration(milliseconds: 250),
   })  : assert(elevationThumb >= 0.0),
         assert(elevationTrack >= 0.0),
-        _swipeButtonType = _SwipeButtonType.expand,
-        super(key: key);
+        _swipeButtonType = _SwipeButtonType.expand;
 
   @override
   State<SwipeButton> createState() => _SwipeState();

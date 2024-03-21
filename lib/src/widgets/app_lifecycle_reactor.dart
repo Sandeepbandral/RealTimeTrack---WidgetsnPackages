@@ -5,8 +5,9 @@ class AppLifecycleReactor extends StatefulWidget {
   final Function(AppLifecycleState) onAppLifecycleStateChanged;
 
   const AppLifecycleReactor(
-      {Key? key, required this.onAppLifecycleStateChanged, required this.child})
-      : super(key: key);
+      {super.key,
+      required this.onAppLifecycleStateChanged,
+      required this.child});
 
   @override
   AppLifecycleReactorState createState() => AppLifecycleReactorState();

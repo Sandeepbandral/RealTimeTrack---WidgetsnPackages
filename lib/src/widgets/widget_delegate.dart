@@ -4,11 +4,11 @@ typedef WidgetDelegateBuilder = Widget Function();
 
 class WidgetDelegate extends StatelessWidget {
   const WidgetDelegate({
-    Key? key,
+    super.key,
     this.shouldShowPrimary = true,
     required this.primaryWidget,
     required this.alternateWidget,
-  }) : super(key: key);
+  });
 
   final bool shouldShowPrimary;
   final WidgetDelegateBuilder primaryWidget;
