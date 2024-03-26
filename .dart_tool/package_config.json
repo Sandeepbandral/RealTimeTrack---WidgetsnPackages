@@ -75,9 +75,9 @@
     },
     {
       "name": "cross_file",
-      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/cross_file-0.3.3+8",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/cross_file-0.3.4+1",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "crypto",
@@ -201,9 +201,9 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/http-1.2.0",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/http-1.2.1",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "http_parser",
@@ -345,9 +345,9 @@
     },
     {
       "name": "package_info_plus",
-      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/package_info_plus-5.0.1",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/package_info_plus-6.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "package_info_plus_platform_interface",
@@ -471,9 +471,9 @@
     },
     {
       "name": "shared_preferences_web",
-      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/shared_preferences_web-2.2.2",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/shared_preferences_web-2.3.0",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "shared_preferences_windows",
@@ -597,9 +597,9 @@
     },
     {
       "name": "url_launcher_web",
-      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/url_launcher_web-2.2.3",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/url_launcher_web-2.3.0",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "url_launcher_windows",
@@ -645,15 +645,15 @@
     },
     {
       "name": "web",
-      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/web-0.4.2",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/web-0.5.1",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "web_socket_channel",
-      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.3",
+      "rootUri": "file:///Users/vishalvirani/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.4",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "win32",
@@ -686,7 +686,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2024-03-14T10:05:32.373501Z",
+  "generated": "2024-03-26T11:48:44.019341Z",
   "generator": "pub",
   "generatorVersion": "3.3.1"
 }
