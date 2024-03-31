@@ -14,7 +14,7 @@ class DriverDeliveryTime {
 
     return DriverDeliveryTime(
       lastDeliveryTime: map['last_delivery_time'] != null
-          ? format.parse(map['last_delivery_time'])
+          ? DateTime.parse(map['last_delivery_time'])
           : null,
       timeToBackWarehouse: map['time_to_back_warehouse'] != null
           ? format.parse(map['time_to_back_warehouse'])
