@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:web_socket_channel/status.dart' as status;
@@ -17,27 +16,16 @@ class WebSocketClient {
   Function(Map<String, dynamic> data)? onListener;
 
   Future<void> connect() async {
-    try {
-      _channel = WebSocketChannel.connect(Uri.parse(url));
-      await _channel?.ready;
-      if (onListener != null) {
-        _channelStreamSubscription = _channel?.stream.listen(
-          (data) => onListener!(jsonDecode(data)),
-          cancelOnError: true,
-        );
-      }
-    } on SocketException catch (_) {
-      connect();
-    } on WebSocketChannelException catch (_) {
-      connect();
+    _channel = WebSocketChannel.connect(Uri.parse(url));
+    await _channel?.ready;
+    if (onListener != null) {
+      _channelStreamSubscription = _channel?.stream.listen(
+        (data) => onListener!(jsonDecode(data)),
+        onDone: () => connect,
+        onError: (error) => connect(),
+        cancelOnError: true,
+      );
     }
-  }
-
-  Stream<dynamic> get stream {
-    if (_channel != null) {
-      return _channel!.stream;
-    }
-    throw UnimplementedError();
   }
 
   Future<void> disconnect() async {
