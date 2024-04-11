@@ -37,6 +37,7 @@ export 'src/helpers/circle_thumb_shape.dart';
 export 'src/helpers/exceptions.dart';
 export 'src/helpers/header_builder.dart';
 export 'src/helpers/result.dart';
+export 'src/helpers/timezone_manager.dart';
 
 export 'src/services/connectivity_service.dart';
 export 'src/services/platform_service.dart';
