@@ -56,7 +56,7 @@ class Preferences {
   }
 
   Duration get locationRefreshRate {
-    return Duration(seconds: _shared?.getInt(_locationRefreshRate) ?? 60);
+    return Duration(seconds: _shared?.getInt(_locationRefreshRate) ?? 120);
   }
 
   set keepScreenOn(bool value) => _shared?.setBool(_keepScreenOn, value);
