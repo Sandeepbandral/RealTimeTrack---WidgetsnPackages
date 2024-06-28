@@ -86,4 +86,5 @@ class RttAssets {
   static String like = 'assets/icons/like.svg';
 
   static String feedback = 'assets/icons/feedback.svg';
+  static String warehouse = 'assets/icons/warehouse.png';
 }
