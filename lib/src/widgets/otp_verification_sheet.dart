@@ -25,7 +25,7 @@ class OtpVerification extends StatefulWidget {
 
   static Future<void> show(
     BuildContext context, {
-    required String phoneNumber,
+    required String emailOrMobile,
     required VoidCallback onOtpResended,
     required OtpVerifificationCallback onOtpVerification,
     required OtpVerifiedCallback onOtpVerified,
@@ -39,7 +39,7 @@ class OtpVerification extends StatefulWidget {
         return PopScope(
           canPop: false,
           child: OtpVerification(
-            emailOrMobile: phoneNumber,
+            emailOrMobile: emailOrMobile,
             onOtpResended: onOtpResended,
             onOtpVerification: onOtpVerification,
             onOtpVerified: onOtpVerified,
