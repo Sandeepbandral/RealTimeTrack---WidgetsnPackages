@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
@@ -11,14 +10,14 @@ typedef OtpVerifificationCallback = Future<bool> Function(String otpCode);
 typedef OtpVerifiedCallback = void Function(bool verified);
 
 class OtpVerification extends StatefulWidget {
-  final String phoneNumber;
+  final String emailOrMobile;
   final VoidCallback onOtpResended;
   final OtpVerifificationCallback onOtpVerification;
   final OtpVerifiedCallback onOtpVerified;
 
   const OtpVerification({
     super.key,
-    required this.phoneNumber,
+    required this.emailOrMobile,
     required this.onOtpResended,
     required this.onOtpVerified,
     required this.onOtpVerification,
@@ -40,7 +39,7 @@ class OtpVerification extends StatefulWidget {
         return PopScope(
           canPop: false,
           child: OtpVerification(
-            phoneNumber: phoneNumber,
+            emailOrMobile: phoneNumber,
             onOtpResended: onOtpResended,
             onOtpVerification: onOtpVerification,
             onOtpVerified: onOtpVerified,
@@ -134,7 +133,9 @@ class _OtpVerificationState extends State<OtpVerification> {
               const HeadingText(title: 'Enter OTP'),
               const SizedBoxH5(),
               Text(
-                'Please enter OTP sent to you mobile no. ${widget.phoneNumber}',
+                num.tryParse(widget.emailOrMobile) != null
+                    ? 'Please enter OTP sent to your mobile no. ${widget.emailOrMobile}'
+                    : 'Please enter OTP sent to you email ${widget.emailOrMobile}',
                 style: textTheme.titleMedium?.copyWith(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
