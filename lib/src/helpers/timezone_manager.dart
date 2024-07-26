@@ -54,6 +54,8 @@ class TimezoneManager {
     }
     return location;
   }
+
+  static String? get localTimezone => _localTimezone;
 }
 
 class TimezoneNotFoundException implements Exception {
