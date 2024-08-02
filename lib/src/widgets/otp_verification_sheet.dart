@@ -5,20 +5,20 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:real_time_track_package/real_time_track_package.dart';
 
-typedef OtpVerifificationCallback = Future<bool> Function(String otpCode);
+typedef OtpVerificationCallback = Future<bool> Function(String otpCode);
 
 typedef OtpVerifiedCallback = void Function(bool verified);
 
 class OtpVerification extends StatefulWidget {
   final String emailOrMobile;
-  final VoidCallback onOtpResended;
-  final OtpVerifificationCallback onOtpVerification;
+  final VoidCallback onOtpResented;
+  final OtpVerificationCallback onOtpVerification;
   final OtpVerifiedCallback onOtpVerified;
 
   const OtpVerification({
     super.key,
     required this.emailOrMobile,
-    required this.onOtpResended,
+    required this.onOtpResented,
     required this.onOtpVerified,
     required this.onOtpVerification,
   });
@@ -26,8 +26,8 @@ class OtpVerification extends StatefulWidget {
   static Future<void> show(
     BuildContext context, {
     required String emailOrMobile,
-    required VoidCallback onOtpResended,
-    required OtpVerifificationCallback onOtpVerification,
+    required VoidCallback onOtpResented,
+    required OtpVerificationCallback onOtpVerification,
     required OtpVerifiedCallback onOtpVerified,
   }) async {
     return await showModalBottomSheet<void>(
@@ -40,7 +40,7 @@ class OtpVerification extends StatefulWidget {
           canPop: false,
           child: OtpVerification(
             emailOrMobile: emailOrMobile,
-            onOtpResended: onOtpResended,
+            onOtpResented: onOtpResented,
             onOtpVerification: onOtpVerification,
             onOtpVerified: onOtpVerified,
           ),
@@ -157,7 +157,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   onPressed: () {
-                    widget.onOtpResended();
+                    widget.onOtpResented();
                     _startTimer();
                   },
                 ),
