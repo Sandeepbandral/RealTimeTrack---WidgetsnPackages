@@ -146,7 +146,7 @@ class _SwipeState extends State<SwipeButton> with TickerProviderStateMixin {
 
   Widget _buildTrack(BuildContext context, BoxConstraints constraints) {
     final trackColor = widget.enabled
-        ? widget.activeTrackColor ?? context.theme.colorScheme.background
+        ? widget.activeTrackColor ?? context.theme.colorScheme.surface
         : widget.inactiveTrackColor ?? context.theme.disabledColor;
 
     final borderRadius = widget.borderRadius ?? BorderRadius.circular(150);

@@ -7,7 +7,7 @@ class Warehouse {
   final String? phone;
   final String? altPhone;
   final String? countryCode;
-  final bool isMainLocalation;
+  final bool isMainLocation;
 
   Warehouse({
     this.id,
@@ -18,7 +18,7 @@ class Warehouse {
     this.phone,
     this.altPhone,
     this.countryCode,
-    this.isMainLocalation = false,
+    this.isMainLocation = false,
   });
 
   factory Warehouse.fromMap(Map<String, dynamic> map) {
@@ -31,7 +31,7 @@ class Warehouse {
       phone: map['phone'],
       altPhone: map['alt_phone'] == 'null' ? null : map['alt_phone'],
       countryCode: map['country_code'],
-      isMainLocalation: map['is_main_localation'],
+      isMainLocation: map['is_main_localation'],
     );
   }
 
@@ -45,7 +45,7 @@ class Warehouse {
       'phone': phone,
       'alt_phone': altPhone,
       'country_code': countryCode,
-      'is_main_localation': isMainLocalation,
+      'is_main_localation': isMainLocation,
     };
   }
 }

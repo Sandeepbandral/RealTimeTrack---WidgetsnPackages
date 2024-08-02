@@ -60,12 +60,12 @@ class _PlatformInfoImpl implements PlatformService {
             isAndroid ? _androidInfo?.version.release : _iosInfo?.systemVersion,
       );
     } else {
-      throw PlatformServiceInitialzedException();
+      throw PlatformServiceInitializedException();
     }
   }
 }
 
-class PlatformServiceInitialzedException implements Exception {
+class PlatformServiceInitializedException implements Exception {
   String message =
       'Ensure to initialize PlatformService before accessing it. Please execute the initialize method : init()';
 }

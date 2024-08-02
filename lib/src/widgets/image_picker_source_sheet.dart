@@ -51,7 +51,7 @@ class _ImageSourceListTile extends StatelessWidget {
         backgroundColor: Colors.transparent,
         child: SvgPicture.asset(
           icon,
-          package: RealTimeTrac.name,
+          package: RealTimeTrace.name,
         ),
       ),
       title: Text(

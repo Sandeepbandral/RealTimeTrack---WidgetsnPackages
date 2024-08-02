@@ -61,7 +61,7 @@ class RttBottomNavigationBar extends StatelessWidget {
         imagePath,
         height: size ?? 22,
         width: size ?? 22,
-        package: RealTimeTrac.name,
+        package: RealTimeTrace.name,
         color: color,
       ),
     );

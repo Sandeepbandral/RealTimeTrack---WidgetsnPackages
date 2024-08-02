@@ -36,13 +36,13 @@ class RttMenuItemListing extends StatelessWidget {
         child: item.icon.contains('.svg')
             ? SvgPicture.asset(
                 item.icon,
-                package: RealTimeTrac.name,
+                package: RealTimeTrace.name,
                 height: item.iconSize,
                 width: item.iconSize,
               )
             : Image.asset(
                 item.icon,
-                package: RealTimeTrac.name,
+                package: RealTimeTrace.name,
                 height: item.iconSize,
                 width: item.iconSize,
               ),

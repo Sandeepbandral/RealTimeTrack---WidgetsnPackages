@@ -123,7 +123,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                       dimension: 90,
                       child: SvgPicture.asset(
                         RttAssets.success,
-                        package: RealTimeTrac.name,
+                        package: RealTimeTrace.name,
                       ),
                     ),
                   ),

@@ -55,7 +55,7 @@ export 'src/widgets/rtt_text_field.dart';
 export 'src/widgets/rtt_text_button.dart';
 export 'src/widgets/country_picker.dart';
 export 'src/widgets/otp_verification_sheet.dart';
-export 'src/widgets/rtt_bottom_navigatiron_bar.dart';
+export 'src/widgets/rtt_bottom_navigation_bar.dart';
 export 'src/widgets/image_view.dart';
 export 'src/widgets/rtt_menu_item_listing.dart';
 export 'src/widgets/app_bar.dart';
@@ -81,8 +81,8 @@ export 'package:flutter_svg/flutter_svg.dart';
 
 export 'package:fluttertoast/fluttertoast.dart';
 
-class RealTimeTrac {
-  RealTimeTrac._();
+class RealTimeTrace {
+  RealTimeTrace._();
 
   static const String name = 'real_time_track_package';
 

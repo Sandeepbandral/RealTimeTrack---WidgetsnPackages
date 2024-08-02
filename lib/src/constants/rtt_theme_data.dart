@@ -26,7 +26,7 @@ class RttThemeData {
         scrolledUnderElevation: 0,
         iconTheme: IconThemeData(color: colorScheme.primary),
         actionsIconTheme: IconThemeData(color: colorScheme.primary),
-        backgroundColor: colorScheme.onBackground,
+        backgroundColor: colorScheme.onSurface,
         elevation: 0,
         centerTitle: false,
         titleTextStyle: _textTheme.titleLarge?.copyWith(
@@ -35,12 +35,12 @@ class RttThemeData {
         ),
       ),
       iconTheme: IconThemeData(color: colorScheme.onPrimary),
-      canvasColor: colorScheme.background,
-      scaffoldBackgroundColor: colorScheme.background,
+      canvasColor: colorScheme.surface,
+      scaffoldBackgroundColor: colorScheme.surface,
       highlightColor: Colors.transparent,
       focusColor: colorScheme.primary.withOpacity(0.12),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: colorScheme.background,
+        backgroundColor: colorScheme.surface,
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle: _textTheme.labelLarge?.copyWith(
           fontSize: 12,
@@ -79,7 +79,7 @@ class RttThemeData {
 
   static const Color _primary = Color(0xFF0EB002);
 
-  static const Color secondryBackground = Color(0xffEAF2F4);
+  static const Color secondaryBackground = Color(0xffEAF2F4);
 
   static const Color _background = Colors.white;
 
@@ -90,8 +90,6 @@ class RttThemeData {
     secondary: _primary,
     onSecondary: _primary,
     secondaryContainer: _background,
-    background: Colors.white,
-    onBackground: Colors.white,
     surface: _background,
     error: Colors.red,
     onError: Colors.red,
